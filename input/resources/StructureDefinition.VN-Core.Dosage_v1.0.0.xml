@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-dosage" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-dosage" />
+  <version value="1.0.0" />
+  <name value="VNCoreDosage" />
+  <title value="Dosage profile - VN Core R4" />
+  <status value="draft" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="VN Core Dosage profile" />
+  <purpose value="Dosage profile - VN Core R4" />
+  <copyright value="Bộ Y tế - Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Dosage" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Dosage" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Dosage.text">
+      <path value="Dosage.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.additionalInstruction">
+      <path value="Dosage.additionalInstruction" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/snomedCT-additional-dosage-instruction" />
+      </binding>
+    </element>
+    <element id="Dosage.patientInstruction">
+      <path value="Dosage.patientInstruction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.timing">
+      <path value="Dosage.timing" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.asNeeded[x]">
+      <path value="Dosage.asNeeded[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/snomedCT-clinical-finding" />
+      </binding>
+    </element>
+    <element id="Dosage.site">
+      <path value="Dosage.site" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.route">
+      <path value="Dosage.route" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.method">
+      <path value="Dosage.method" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+      </binding>
+    </element>
+    <element id="Dosage.doseAndRate">
+      <path value="Dosage.doseAndRate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.doseAndRate.type">
+      <path value="Dosage.doseAndRate.type" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Dosage.doseAndRate.dose[x]">
+      <path value="Dosage.doseAndRate.dose[x]" />
+      <type>
+        <code value="Range" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips" />
+      </type>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+    </element>
+    <element id="Dosage.doseAndRate.rate[x]">
+      <path value="Dosage.doseAndRate.rate[x]" />
+      <type>
+        <code value="Ratio" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips" />
+      </type>
+      <type>
+        <code value="Range" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips" />
+      </type>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+    </element>
+    <element id="Dosage.maxDosePerPeriod">
+      <path value="Dosage.maxDosePerPeriod" />
+      <type>
+        <code value="Ratio" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips" />
+      </type>
+    </element>
+    <element id="Dosage.maxDosePerAdministration">
+      <path value="Dosage.maxDosePerAdministration" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Dosage.maxDosePerLifetime">
+      <path value="Dosage.maxDosePerLifetime" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

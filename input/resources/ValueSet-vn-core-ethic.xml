@@ -1,0 +1,23 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vn-core-ethic"/>
+  <url value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-ethic"/>
+  <version value="1.0"/>
+  <name value="ValueSet-VN_Core_Ethic"/>
+  <title value="ValueSet dành cho Thông tin tôn giáo"/>
+  <status value="active"/>
+  <date value="2020-12-30"/>
+  <publisher value="Bộ Y tế"/>
+  <description value="ValueSet dành cho Thông tin tôn giáo - Theo ban hành Danh mục Tôn giáo của Tổng cục thống kê "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="VN"/>
+      <display value="Vietnam"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-ethic"/>
+    </include>
+  </compose>
+</ValueSet>

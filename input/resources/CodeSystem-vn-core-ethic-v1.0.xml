@@ -1,0 +1,49 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-ethic"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-ethic"/>
+   <version value="1.0"/>
+   <name value="Danh mục Tôn giáo - theo ban hành của Tổng cục thống kê"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Tổng cục thống kê"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Dân tộc - theo ban hành của Tổng cục thống kê. Tham vấn: https://www.gso.gov.vn/danhmuc/DMtongiao.aspx"/>
+   <copyright value="Tổng cục thống kê"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="1"/>
+      <display value="Phật Giáo"/>
+	  <definition value="Phật Giáo"/>
+   </concept>
+   <concept>
+      <code value="2"/>
+      <display value="Công Giáo"/>
+	  <definition value="Công Giáo"/>
+   </concept>
+   <concept>
+      <code value="3"/>
+      <display value="Phật giáo Hòa Hảo"/>
+	  <definition value="Phật giáo Hòa Hảo"/>
+   </concept>
+   <concept>
+      <code value="4"/>
+      <display value="Hồi giáo"/>
+	  <definition value="Hồi giáo
+- Cao đài Tây Ninh,
+- Cao đài Tiên Thiên
+- Cao đài Chơn Lý
+- Cao đài Bạch Y"/>
+   </concept>
+   <concept>
+      <code value="5"/>
+      <display value="..."/>
+	  <definition value="Tôn giáo ..."/>
+   </concept>
+</CodeSystem>

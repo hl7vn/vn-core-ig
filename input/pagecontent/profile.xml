@@ -1,0 +1,336 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  
+	
+	<a name="summary"> </a>
+	<h3 id="summary">Core Profile</h3>
+
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th>Cá nhân</th>
+		  <th>Tổ chức</th>
+		  <th>Quản lý bệnh nhân</th>
+		  <th>Khác</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-patient.html" target="_blank">Patient</a></td>
+		  <td><a href="StructureDefinition-vn-core-location.html" target="_blank">Location</a></td>
+		  <td><a href="StructureDefinition-vn-core-encounter.html" target="_blank">Encounter</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-practitioner.html" target="_blank">Practitioner</a></td>
+		  <td><a href="StructureDefinition-vn-core-provider.html" target="_blank">Organisation - Healthcare Provider</a></td>
+		  <td></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-practitioner-role.html" target="_blank">PractitionerRole</a></td>
+		  <td><a href="StructureDefinition-vn-core-healthcare-department.html" target="_blank">Organisation - Healthcare Department</a></td>
+		  <td> </td>
+		  <td> </td>
+		</tr>
+	  </tbody>
+	</table>
+	<br/>
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th>Tổng quan</th>
+		  <th>Chẩn đoán</th>
+		  <th>Dược</th>
+		  <th>Khác</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-allergy-intolerance.html" target="_blank">Allergy Intolerance</a></td>
+		  <td><a href="StructureDefinition-vn-core-diagnostic-report.html" target="_blank">Diagnostic Report</a></td>
+		  <td><a href="StructureDefinition-vn-core-immunization.html" target="_blank">Immunization</a></td>
+		  <td><a href="StructureDefinition-vn-core-service-request.html" target="_blank">Service Request</a></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-procedure.html" target="_blank">Procedure</a></td>
+		  <td><a href="StructureDefinition-vn-core-specimen.html" target="_blank">Specimen</a></td>
+		  <td><a href="StructureDefinition-vn-core-medication.html" target="_blank">Medication</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-condition-encounter-diagnosis.html" target="_blank">Condition - Encounter diagnosis</a></td>
+		  <td><a href="StructureDefinition-vn-core-imaging-study.html" target="_blank">Imaging study</a></td>
+		  <td><a href="StructureDefinition-vn-core-medication-request.html" target="_blank">Medication Request</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-condition-problemlist.html" target="_blank">Condition - Problem list</a></td>
+		  <td><a href="StructureDefinition-vn-core-media-observation.html" target="_blank">Media</a></td>
+		  <td><a href="StructureDefinition-vn-core-medication-statement.html" target="_blank">Medication Statement</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-device.html" target="_blank">Device</a></td>
+		  <td><a href="StructureDefinition-vn-core-observation-lab-code.html" target="_blank">Observation - Laboratory result</a></td>
+		  <td><a href="StructureDefinition-vn-core-medication-dispense.html" target="_blank">Medication Dispense</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td></td>
+		  <td><a href="StructureDefinition-vn-core-observation-pathology-code.html" target="_blank">Observation - Pathology result</a></td>
+		  <td><a href="StructureDefinition-vn-core-medication-administration.html" target="_blank">Medication Administration</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td></td>
+		  <td><a href="StructureDefinition-vn-core-observation-radiology-code.html" target="_blank">Observation - Radiology result</a></td>
+		  <td></td>
+		  <td></td>
+		</tr>
+	  </tbody>
+	</table>
+	<br/>	
+	
+	<a name="base-profile"> </a>
+	<h3 id="base-profile">Base Profiles</h3>
+
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th>Base Profiles</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-coding.html" target="_blank">Base Coding</a></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-codeableconcept.html" target="_blank">Base Codeable Concept</a></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-address.html" target="_blank">Base Address</a></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-dosage.html" target="_blank">Base Dosage</a></td>
+		</tr>
+		<tr>
+		  <td><a href="StructureDefinition-vn-core-obervation-result-base.html" target="_blank">Base Observation Result</a></td>
+		</tr>
+	  </tbody>
+	</table>
+	<br/>
+	
+	<a name="vital-signs"> </a>
+	<h3 id="vital-signs">Các chỉ số sinh tồn</h3>
+
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th>Chỉ số sinh tồn</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/bp.html" target="_blank">Huyết áp</a></td>
+		</tr>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/resprate.html" target="_blank">Nhịp thở</a></td>
+		</tr>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/heartrate.html" target="_blank">Nhịp tim</a></td>
+		</tr>
+		<tr>
+		  <td><a href="https://www.hl7.org/fhir/oxygensat.html" target="_blank">SpO2</a></td>
+		</tr>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/bodytemp.html" target="_blank">Nhiệt độ</a></td>
+		</tr>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/bodyweight.html" target="_blank">Cân nặng</a></td>
+		</tr>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/bodyheight.html" target="_blank">Chiều cao</a></td>
+		</tr>
+		<tr>
+		  <td><a href="http://hl7.org/fhir/R4/headcircum.html" target="_blank">Đường kính xương đầu chẩm (dành cho trẻ em)</a></td>
+		</tr>
+		<tr>
+		  <td><a href="https://www.hl7.org/fhir/bmi.html" target="_blank">Chỉ số BMI</a></td>
+		</tr>
+	  </tbody>
+	</table>
+	<br/>
+
+	<a name="total"> </a>
+	<h3 id="total">Chi tiết thông tin các Profile</h3>
+	
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-provider.html" target="_blank">Healthcare Provider (Organization)</a>
+		</td>
+		<td>
+			<p>The Organization resource represents the organisation that employs the healthcare professional.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-healthcare-department.html" target="_blank">Healthcare Department (Organization)</a>
+		</td>
+		<td>
+			<p>The Organization resource represents the organisation that employs the healthcare professional.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-patient.html" target="_blank">Patient</a>
+		</td>
+		<td>
+			<p>The patient resource represents the patient involved in the provision of healthcare related services.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-encounter.html" target="_blank">Encounter</a>
+		</td>
+		<td>
+			<p>The encounter resource represents an encounter between a care professional and the patient (or patient's record).</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-allergy-intolerance.html" target="_blank">AllergyIntolerance</a>
+		</td>
+		<td>
+			<p>This AllergyIntolerance Resource records Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-condition-problemlist.html" target="_blank">Problem List-Condition</a>
+		</td>
+		<td>
+			<p>This Condition resource records detailed information about conditions recognised by a clinician.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-condition-encounter-diagnosis.html" target="_blank">Enounter Diagnosis-Condition</a>
+		</td>
+		<td>
+			<p>This Condition resource records detailed information about diagnosis recognised by a clinician.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-practitioner.html" target="_blank">Practitioner</a>
+		</td>
+		<td>
+			<p>The Practitioner resource represents the healthcare professional directly or indirectly involved in the provision of healthcare related services.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-practitioner-role.html" target="_blank">PractitionerRole</a>
+		</td>
+		<td>
+			<p>The PractitionerRole resource represents a specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-diagnostic-report.html" target="_blank">DiagnosticReport</a>
+		</td>
+		<td>
+			<p>A test report for National Pathology that contains data on the pathology tests performed on patients specimens populated by the performing organisation.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="#" target="_blank">FamilyMemberHistory</a>
+		</td>
+		<td>
+			<p>Significant health events and conditions for a person related to the patient relevant in the context of care for the patient.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-immunization.html" target="_blank">Immunization</a>
+		</td>
+		<td>
+			<p>This Immunization Resource describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party, and may include vaccine reaction information and what vaccination protocol was followed.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-location.html" target="_blank">Location</a>
+		</td>
+		<td>
+			<p>The Location resource provides information and details on the physical location and the services provided.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-medication.html" target="_blank">Medication</a>
+		</td>
+		<td>
+			<p>This Medication Resource is primarily used for the identification and definition of a medication.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-medication-administration.html" target="_blank">MedicationAdministration</a>
+		</td>
+		<td>
+			<p>Describes the event of a patient consuming or otherwise being administered a medication.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-medication-dispense.html" target="_blank">MedicationDispense</a>
+		</td>
+		<td>
+			<p>Indicates that a medication product is to be or has been dispensed for a named person/patient.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-medication-request.html" target="_blank">MedicationRequest</a>
+		</td>
+		<td>
+			<p>This MedicationRequest Resource represents an order for both supply of the medication and the instructions for administration of the medication to a patient.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-medication-statement.html" target="_blank">MedicationStatement</a>
+		</td>
+		<td>
+			<p>This MedicationStatement Resource is a record of a medication that is being consumed by a patient.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-procedure.html" target="_blank">Procedure</a>
+		</td>
+		<td>
+			<p>An action that is or was performed on a patient.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-service-request.html" target="_blank">ServiceRequest</a>
+		</td>
+		<td>
+			<p>Service Request</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="StructureDefinition-vn-core-specimen.html">Specimen</a>
+		</td>
+		<td>
+			<p>Specimen</p>
+		</td>
+	</tr>
+</div>

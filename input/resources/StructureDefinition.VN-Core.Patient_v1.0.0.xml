@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-patient" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:16:34.649+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+  <version value="1.0.0" />
+  <name value="VNCorePatient" />
+  <title value="Patient Profile - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:16:32.5486315+00:00" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Thông tin mô tả về người bệnh." />
+  <purpose value="TODO: add note" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="loinc" />
+    <uri value="http://loinc.org" />
+    <name value="LOINC code for the element" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:patientEthicExtension">
+      <path value="Patient.extension" />
+      <sliceName value="patientEthicExtension" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-ethic" />
+      </type>
+    </element>
+    <element id="Patient.extension:patientRaceExtension">
+      <path value="Patient.extension" />
+      <sliceName value="patientRaceExtension" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-race" />
+      </type>
+    </element>
+    <element id="Patient.extension:patientOccupationExtenstion">
+      <path value="Patient.extension" />
+      <sliceName value="patientOccupationExtenstion" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-occupation" />
+      </type>
+    </element>
+    <element id="Patient.extension:patientNationalityExtension">
+      <path value="Patient.extension" />
+      <sliceName value="patientNationalityExtension" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-nationality" />
+      </type>
+    </element>
+    <element id="Patient.extension:patientEducationLevel">
+      <path value="Patient.extension" />
+      <sliceName value="patientEducationLevel" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-education-level" />
+      </type>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="value" />
+        </discriminator>
+        <description value="TODO: add note" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.identifier:SoCMT">
+      <path value="Patient.identifier" />
+      <sliceName value="SoCMT" />
+      <label value="Định nghĩa cho số CMT nhân dân" />
+      <short value="Định nghĩa cho số CMT nhân dân" />
+      <definition value="Định nghĩa cho số CMT nhân dân" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:SoCMT.use">
+      <path value="Patient.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Patient.identifier:SoCMT.type">
+      <path value="Patient.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="NI" />
+          <display value="National unique individual identifier" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:SoCMT.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/citizen_id" />
+    </element>
+    <element id="Patient.identifier:SoCMT.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:SoHoChieu">
+      <path value="Patient.identifier" />
+      <sliceName value="SoHoChieu" />
+      <label value="Định nghĩa cho số hộ chiếu" />
+      <short value="Định nghĩa cho số hộ chiếu" />
+      <definition value="Định nghĩa cho số hộ chiếu" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:SoHoChieu.type">
+      <path value="Patient.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PPN" />
+          <display value="Passport number" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:SoHoChieu.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/passport_number" />
+    </element>
+    <element id="Patient.identifier:SoHoChieu.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:TheCCCD">
+      <path value="Patient.identifier" />
+      <sliceName value="TheCCCD" />
+      <label value="Định nghĩa cho thẻ căn cước công dân" />
+      <short value="Định nghĩa cho thẻ căn cước công dân" />
+      <definition value="Định nghĩa cho thẻ căn cước công dân" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:TheCCCD.use">
+      <path value="Patient.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Patient.identifier:TheCCCD.type">
+      <path value="Patient.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="NI" />
+          <display value="National unique individual identifier" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:TheCCCD.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/national_id" />
+    </element>
+    <element id="Patient.identifier:TheCCCD.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:TheBHYT">
+      <path value="Patient.identifier" />
+      <sliceName value="TheBHYT" />
+      <label value="Định nghĩa cho thẻ bảo hiểm xã hội" />
+      <short value="Định nghĩa cho thông tin về thẻ bảo hiểm y tế" />
+      <definition value="Định nghĩa cho thông tin về thẻ bảo hiểm y tế" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:TheBHYT.use">
+      <path value="Patient.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Patient.identifier:TheBHYT.type">
+      <path value="Patient.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="SB" />
+          <display value="Social Beneficiary Identifier" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:TheBHYT.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/insurance_number" />
+    </element>
+    <element id="Patient.identifier:TheBHYT.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:MaBenhNhan">
+      <path value="Patient.identifier" />
+      <sliceName value="MaBenhNhan" />
+      <label value="Mã bệnh nhân tại Cơ sở khám, chữa bệnh" />
+      <short value="Mã bệnh nhân tại Cơ sở khám, chữa bệnh" />
+      <definition value="Mã bệnh nhân tại Cơ sở khám, chữa bệnh" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:MaBenhNhan.use">
+      <path value="Patient.identifier.use" />
+      <fixedCode value="secondary" />
+    </element>
+    <element id="Patient.identifier:MaBenhNhan.type">
+      <path value="Patient.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PI" />
+          <display value="Patient internal identifier" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:MaBenhNhan.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/patient-internal-id" />
+    </element>
+    <element id="Patient.identifier:MaBenhNhan.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:BangLaiXe">
+      <path value="Patient.identifier" />
+      <sliceName value="BangLaiXe" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:BangLaiXe.use">
+      <path value="Patient.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Patient.identifier:BangLaiXe.type">
+      <path value="Patient.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="DL" />
+          <display value="Driver's license number" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Patient.identifier:BangLaiXe.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/driver_license_number" />
+    </element>
+    <element id="Patient.identifier:BangLaiXe.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Patient.active">
+      <path value="Patient.active" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.text">
+      <path value="Patient.name.text" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-address" />
+      </type>
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.photo">
+      <path value="Patient.photo" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.contact.relationship">
+      <path value="Patient.contact.relationship" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-address" />
+      </type>
+    </element>
+    <element id="Patient.managingOrganization">
+      <path value="Patient.managingOrganization" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

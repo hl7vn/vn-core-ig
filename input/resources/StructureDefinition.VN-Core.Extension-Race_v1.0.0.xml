@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-race" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:16:03.585+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-race" />
+  <version value="1.0" />
+  <name value="Race" />
+  <title value="Extension - Race - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:15:59.5282789+00:00" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Extension dành cho thông tin Dân tộc của người bệnh" />
+  <purpose value="Extension dành cho Danh mục Dân tộc" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Extension về thông tin Dân tộc của người bệnh" />
+      <definition value="Extension về thông tin Dân tộc của người bệnh" />
+      <max value="1" />
+      <isModifier value="true" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-race" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin dân tộc" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-race" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

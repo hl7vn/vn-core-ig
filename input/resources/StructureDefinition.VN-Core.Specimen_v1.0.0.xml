@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-specimen" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-specimen" />
+  <version value="1.0.0" />
+  <name value="VNCoreSpecimen" />
+  <title value="Specimen profile - VN Core R4" />
+  <status value="draft" />
+  <description value="Thông tin về mẫu bệnh phẩm" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Specimen" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Specimen.type">
+      <path value="Specimen.type" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Specimen.subject">
+      <path value="Specimen.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="Specimen.parent">
+      <path value="Specimen.parent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-specimen" />
+      </type>
+    </element>
+    <element id="Specimen.request">
+      <path value="Specimen.request" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+      </type>
+    </element>
+    <element id="Specimen.collection.method">
+      <path value="Specimen.collection.method" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Specimen.collection.bodySite">
+      <path value="Specimen.collection.bodySite" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Specimen.collection.fastingStatus[x]">
+      <path value="Specimen.collection.fastingStatus[x]" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <type>
+        <code value="Duration" />
+      </type>
+    </element>
+    <element id="Specimen.container">
+      <path value="Specimen.container" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.condition">
+      <path value="Specimen.condition" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

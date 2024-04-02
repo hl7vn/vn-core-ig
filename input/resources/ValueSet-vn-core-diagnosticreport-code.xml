@@ -1,0 +1,31 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vn-core-diagnosticreport-code"/>
+  <url value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-diagnosticreport-code"/>
+  <version value="1.0"/>
+  <name value="ValueSet-VN_Core_Diagnosticreport_Code"/>
+  <title value="ValueSet for Diagnostic Report Code"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2020-12-30"/>
+  <publisher value="Bộ Y tế"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://moh.gov.vn"/>
+    </telecom>
+  </contact>
+  <description value="This value set currently contains all of LOINC. The codes selected should represent discrete and narrative diagnostic observations and reports"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="VN"/>
+      <display value="Viet Nam"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material contains content from [LOINC](http://loinc.org). LOINC is copyright &#xA9; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC&#xAE; is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+    </include>
+  </compose>
+</ValueSet>

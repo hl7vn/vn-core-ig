@@ -1,0 +1,59 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="LL940-8"/>
+   <meta>
+      <versionId value="4"/>
+      <lastUpdated value="2019-12-15T20:36:17.731+00:00"/>
+   </meta>
+   <url value="http://loinc.org/vs/LL940-8"/>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:1.3.6.1.4.1.12009.10.1.3365"/>
+   </identifier>
+   <version value="Loinc_2.67"/>
+   <name value="Imm_status"/>
+   <title value="LOINC® LL940-8 - ValueSet về tình trạng tiêm chủng"/>
+   <description value="LOINC® LL940-8 - ValueSet về tình trạng tiêm chủng."/>
+   <status value="active"/>
+   <publisher value="Regenstrief Institute, Inc."/>
+   <contact>
+      <name value="Regenstrief Institute, Inc."/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://loinc.org"/>
+      </telecom>
+   </contact>
+   <copyright value="This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at https://loinc.org/license/"/>
+   <compose>
+      <include>
+         <system value="http://loinc.org"/>
+         <concept>
+            <code value="LA13421-5"/>
+            <display value="Hoàn thành - Bệnh nhân đã hoàn thành tất cả các mũi tiêm cần thiết."/>
+         </concept>
+         <concept>
+            <code value="LA13422-3"/>
+            <display value="Đúng lịch - Bệnh nhân đã hoàn thành các mũi tiêm đúng lịch, và chưa quá hạn các mũi tiêm tiếp theo."/>
+         </concept>
+         <concept>
+            <code value="LA13423-1"/>
+            <display value="Quá hạn - Bệnh nhân đã quá hạn tiêm mũi tiêm tiếp theo theo lịch hẹn."/>
+         </concept>
+         <concept>
+            <code value="LA13424-9"/>
+            <display value="Quá tuổi - Bệnh nhân đã quá tuổi để thực hiện các mũi tiêm."/>
+         </concept>
+         <concept>
+            <code value="LA27183-5"/>
+            <display value="Miễn dịch."/>
+         </concept>
+         <concept>
+            <code value="LA4216-3"/>
+            <display value="Chống chỉ định."/>
+         </concept>
+         <concept>
+            <code value="LA4695-8"/>
+            <display value="Không khuyến nghị thực hiện tiêm ngừa."/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

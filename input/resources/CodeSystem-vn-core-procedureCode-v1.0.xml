@@ -1,0 +1,20 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-procedureCode"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-procedureCode"/>
+   <version value="1.0"/>
+   <name value="Danh mục Dịch vụ kỹ thuật - theo ban hành và quản lý của Bộ Y tế"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Bộ Y tế"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Dịch vụ kỹ thuật - theo ban hành và quản lý của Bộ Y tế."/>
+   <copyright value="Bộ Y tế"/>
+   <caseSensitive value="true"/>
+   <content value="not-present"/>
+</CodeSystem>

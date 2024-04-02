@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-coding-sct-descid" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:13:04.547+00:00" />
+  </meta>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-coding-sct-descid" />
+  <version value="1.0.0" />
+  <name value="ExtensionCodingSctDescID" />
+  <title value="Extension for Snomed CT Description ID in Coding type" />
+  <status value="draft" />
+  <date value="2021-05-19T09:13:02.4402811+00:00" />
+  <description value="Extension for Snomed CT Description ID and Info" />
+  <purpose value="Extension for Snomed CT Description ID and Info" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Coding" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:SctInternationalEditionVersion">
+      <path value="Extension.extension" />
+      <sliceName value="SctInternationalEditionVersion" />
+      <short value="The Snomed CT International Edition version" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:SctInternationalEditionVersion.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="SctInternationalEditionVersion" />
+    </element>
+    <element id="Extension.extension:SctInternationalEditionVersion.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="id" />
+      </type>
+    </element>
+    <element id="Extension.extension:SctDescId">
+      <path value="Extension.extension" />
+      <sliceName value="SctDescId" />
+      <short value="The SNOMED CT Description ID" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:SctDescId.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="SctDescId" />
+    </element>
+    <element id="Extension.extension:SctDescId.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="id" />
+      </type>
+    </element>
+    <element id="Extension.extension:SctDescriptionDisplay">
+      <path value="Extension.extension" />
+      <sliceName value="SctDescriptionDisplay" />
+      <short value="The SNOMED CT display for the description ID" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:SctDescriptionDisplay.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="SctDescriptionDisplay" />
+    </element>
+    <element id="Extension.extension:SctDescriptionDisplay.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-coding-sct-descid" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

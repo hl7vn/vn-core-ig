@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-service-request" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+  <version value="1.0.0" />
+  <name value="VNCoreServiceRequest" />
+  <title value="ServiceRequest profile - VN Core R4" />
+  <status value="draft" />
+  <date value="2020-12-31" />
+  <description value="Thông tin mô tả về chỉ định dịch vụ kỹ thuật" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="quick" />
+    <uri value="http://siframework.org/cqf" />
+    <name value="Quality Improvement and Clinical Knowledge (QUICK)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest.identifier">
+      <path value="ServiceRequest.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.basedOn">
+      <path value="ServiceRequest.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.replaces">
+      <path value="ServiceRequest.replaces" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+      </type>
+    </element>
+    <element id="ServiceRequest.requisition">
+      <path value="ServiceRequest.requisition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.category">
+      <path value="ServiceRequest.category" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.priority">
+      <path value="ServiceRequest.priority" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.code">
+      <path value="ServiceRequest.code" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-procedure-code" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.orderDetail">
+      <path value="ServiceRequest.orderDetail" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="ServiceRequest.encounter">
+      <path value="ServiceRequest.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.occurrence[x]">
+      <path value="ServiceRequest.occurrence[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.authoredOn">
+      <path value="ServiceRequest.authoredOn" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.requester">
+      <path value="ServiceRequest.requester" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.performerType">
+      <path value="ServiceRequest.performerType" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="ServiceRequest.performer">
+      <path value="ServiceRequest.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-healthcare-department" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.locationReference">
+      <path value="ServiceRequest.locationReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-location" />
+      </type>
+    </element>
+    <element id="ServiceRequest.reasonCode">
+      <path value="ServiceRequest.reasonCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-condition-code" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.reasonReference">
+      <path value="ServiceRequest.reasonReference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.specimen">
+      <path value="ServiceRequest.specimen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.bodySite">
+      <path value="ServiceRequest.bodySite" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.patientInstruction">
+      <path value="ServiceRequest.patientInstruction" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

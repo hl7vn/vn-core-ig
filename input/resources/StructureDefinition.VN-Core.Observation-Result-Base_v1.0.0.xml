@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-obervation-result-base" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-obervation-result-base" />
+  <version value="1.0.0" />
+  <name value="VNCoreObservationResultBase" />
+  <title value="Observation - Result Base profile - VN Core R4" />
+  <status value="draft" />
+  <description value="Base profile dành cho các kết quả cận lâm sàng" />
+  <purpose value="// TODO" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.basedOn">
+      <path value="Observation.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-request" />
+      </type>
+    </element>
+    <element id="Observation.partOf">
+      <path value="Observation.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-procedure" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-immunization" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-administration" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-dispense" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-statement" />
+      </type>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+    </element>
+    <element id="Observation.issued">
+      <path value="Observation.issued" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-provider" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-healthcare-department" />
+      </type>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-obervation-result-base" />
+      </type>
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Observation.component.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Observation.component.interpretation">
+      <path value="Observation.component.interpretation" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

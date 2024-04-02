@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-condition-problemlist" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-10-07T10:24:01.471+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-condition-problemlist" />
+  <version value="1.0.0" />
+  <name value="VNCoreConditionProblemList" />
+  <title value="Condition - Problem list - VN Core R4" />
+  <status value="draft" />
+  <description value="Thông tin về các bệnh mà người bệnh đã gặp phải" />
+  <purpose value="TODO: add note" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/condition-category" />
+          <code value="problem-list-item" />
+          <display value="Problem List Item" />
+        </coding>
+        <text value="Problem List Item" />
+      </fixedCodeableConcept>
+    </element>
+    <element id="Condition.code:conditionCode">
+      <path value="Condition.code" />
+      <sliceName value="conditionCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="VnCondtionCode" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-condition-code" />
+      </binding>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="Condition.encounter">
+      <path value="Condition.encounter" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+    </element>
+    <element id="Condition.recordedDate">
+      <path value="Condition.recordedDate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.stage.summary">
+      <path value="Condition.stage.summary" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Condition.stage.type">
+      <path value="Condition.stage.type" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.code">
+      <path value="Condition.evidence.code" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

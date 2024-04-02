@@ -1,0 +1,80 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-education-level"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-education-level"/>
+   <version value="1.0"/>
+   <name value="Danh mục Trình độ văn hóa - theo ban hành của Tổng cục thống kê"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Tổng cục thống kê"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Trình độ văn hóa - theo ban hành của Tổng cục thống kê"/>
+   <copyright value="Tổng cục thống kê"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="1"/>
+      <display value="1/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="2"/>
+      <display value="2/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="3"/>
+      <display value="3/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="4"/>
+      <display value="4/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="5"/>
+      <display value="5/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="6"/>
+      <display value="6/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="7"/>
+      <display value="7/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="8"/>
+      <display value="8/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="9"/>
+      <display value="9/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="10"/>
+      <display value="10/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="11"/>
+      <display value="11/12"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="12"/>
+      <display value="12/12"/>
+	  <definition value=""/>
+   </concept>
+</CodeSystem>

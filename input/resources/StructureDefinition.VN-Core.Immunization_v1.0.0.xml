@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-immunization" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-immunization" />
+  <version value="1.0.0" />
+  <name value="VNCoreImmunization" />
+  <title value="Immunization Profile - VN Core R4" />
+  <status value="draft" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Thông tin tiêm chủng của người bệnh" />
+  <purpose value="VN Core Profile dành cho thông tin Tiêm chủng" />
+  <copyright value="Bộ Y tế" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Immunization" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Immunization.identifier">
+      <path value="Immunization.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.statusReason">
+      <path value="Immunization.statusReason" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.vaccineCode">
+      <path value="Immunization.vaccineCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.vaccineCode:vaccineCode">
+      <path value="Immunization.vaccineCode" />
+      <sliceName value="vaccineCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vaccine-code" />
+      </binding>
+    </element>
+    <element id="Immunization.patient">
+      <path value="Immunization.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="Immunization.encounter">
+      <path value="Immunization.encounter" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+    </element>
+    <element id="Immunization.recorded">
+      <path value="Immunization.recorded" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.reportOrigin">
+      <path value="Immunization.reportOrigin" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.location">
+      <path value="Immunization.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-location" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.manufacturer">
+      <path value="Immunization.manufacturer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.manufacturer.display">
+      <path value="Immunization.manufacturer.display" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.lotNumber">
+      <path value="Immunization.lotNumber" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.expirationDate">
+      <path value="Immunization.expirationDate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.site">
+      <path value="Immunization.site" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.route">
+      <path value="Immunization.route" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.doseQuantity">
+      <path value="Immunization.doseQuantity" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.performer.actor">
+      <path value="Immunization.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="Immunization.reasonCode">
+      <path value="Immunization.reasonCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.reasonReference">
+      <path value="Immunization.reasonReference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.subpotentReason">
+      <path value="Immunization.subpotentReason" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.programEligibility">
+      <path value="Immunization.programEligibility" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.fundingSource">
+      <path value="Immunization.fundingSource" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.reaction">
+      <path value="Immunization.reaction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.protocolApplied">
+      <path value="Immunization.protocolApplied" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.protocolApplied.targetDisease">
+      <path value="Immunization.protocolApplied.targetDisease" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Immunization.protocolApplied.targetDisease:targetDiseaseGPSCode">
+      <path value="Immunization.protocolApplied.targetDisease" />
+      <sliceName value="targetDiseaseGPSCode" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-condition-code" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

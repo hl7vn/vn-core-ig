@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-administrative-address" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:12:53.765+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-administrative-address" />
+  <version value="1.0" />
+  <name value="ExtensionAdministrativeAddress" />
+  <title value="Extension - Địa danh hành chính - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:12:50.6194851+00:00" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Extension về thông tin địa danh hành chính (theo mã địa danh hành chính) của Việt Nam" />
+  <purpose value="Extension về thông tin địa danh hành chính (theo mã địa danh hành chính) của Việt Nam" />
+  <copyright value="Bộ Y tế" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Address" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:state">
+      <path value="Extension.extension" />
+      <sliceName value="state" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:state.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="state" />
+    </element>
+    <element id="Extension.extension:state.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <label value="Extension về thông tin tỉnh thành" />
+      <short value="Extension về thông tin tỉnh thành" />
+      <definition value="Extension về thông tin tỉnh thành" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin địa danh hành chính" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-administrative-address" />
+      </binding>
+    </element>
+    <element id="Extension.extension:city">
+      <path value="Extension.extension" />
+      <sliceName value="city" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:city.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="city" />
+    </element>
+    <element id="Extension.extension:city.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <label value="Extension về thông tin thành phố" />
+      <short value="Extension về thông tin thành phố" />
+      <definition value="Extension về thông tin thành phố" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin địa danh hành chính" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-administrative-address" />
+      </binding>
+    </element>
+    <element id="Extension.extension:district">
+      <path value="Extension.extension" />
+      <sliceName value="district" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:district.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="district" />
+    </element>
+    <element id="Extension.extension:district.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <short value="Extension về thông tin quận huyện" />
+      <definition value="Extension về thông tin quận huyện" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin địa danh hành chính" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-administrative-address" />
+      </binding>
+    </element>
+    <element id="Extension.extension:ward">
+      <path value="Extension.extension" />
+      <sliceName value="ward" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:ward.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ward" />
+    </element>
+    <element id="Extension.extension:ward.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <label value="Extension thông tin về Phường/xã" />
+      <short value="Extension thông tin về Phường/xã" />
+      <definition value="Extension thông tin về Phường/xã" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin địa danh hành chính" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-administrative-address" />
+      </binding>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-administrative-address" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

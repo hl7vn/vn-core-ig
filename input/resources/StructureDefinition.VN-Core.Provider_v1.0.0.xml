@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-provider" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:19:08.351+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-provider" />
+  <version value="1.0.0" />
+  <name value="VNCoreProvider" />
+  <title value="Provider Profile - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:19:06.1804199+00:00" />
+  <description value="Thông tin mô tả về cơ sở khám, chữa bệnh" />
+  <purpose value="TODO: add note" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.identifier:SoDKKinhDoanh">
+      <path value="Organization.identifier" />
+      <sliceName value="SoDKKinhDoanh" />
+      <label value="Thông tin về số đăng ký kinh doanh của CSKCB" />
+      <short value="Thông tin về số đăng ký kinh doanh của CSKCB" />
+      <definition value="Thông tin về số đăng ký kinh doanh của CSKCB" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:SoDKKinhDoanh.use">
+      <path value="Organization.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Organization.identifier:SoDKKinhDoanh.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="LN" />
+          <display value="License number" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Organization.identifier:SoDKKinhDoanh.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/provider-license-number" />
+    </element>
+    <element id="Organization.identifier:SoDKKinhDoanh.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:SoGPHoatDongKhamChuaBenh">
+      <path value="Organization.identifier" />
+      <sliceName value="SoGPHoatDongKhamChuaBenh" />
+      <label value="Thông tin về Số giấy phép hoạt động khám, chữa bệnh của CSKCB" />
+      <short value="Thông tin về Số giấy phép hoạt động khám, chữa bệnh của CSKCB" />
+      <definition value="Thông tin về Số giấy phép hoạt động khám, chữa bệnh của CSKCB" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:SoGPHoatDongKhamChuaBenh.use">
+      <path value="Organization.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Organization.identifier:SoGPHoatDongKhamChuaBenh.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="LN" />
+          <display value="License number" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Organization.identifier:SoGPHoatDongKhamChuaBenh.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/provider-medical-license-number" />
+    </element>
+    <element id="Organization.identifier:SoGPHoatDongKhamChuaBenh.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:MaCSKCB">
+      <path value="Organization.identifier" />
+      <sliceName value="MaCSKCB" />
+      <label value="Thông tin về Mã cơ sở KCB theo ban hành của Bộ Y tế" />
+      <short value="Thông tin về Mã cơ sở KCB theo ban hành của Bộ Y tế" />
+      <definition value="Thông tin về Mã cơ sở KCB theo ban hành của Bộ Y tế" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:MaCSKCB.use">
+      <path value="Organization.identifier.use" />
+      <fixedCode value="secondary" />
+    </element>
+    <element id="Organization.identifier:MaCSKCB.type">
+      <path value="Organization.identifier.type" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PRN" />
+          <display value="Provider number" />
+        </coding>
+        <text value="Provider number" />
+      </patternCodeableConcept>
+    </element>
+    <element id="Organization.identifier:MaCSKCB.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/sid/provider-code" />
+    </element>
+    <element id="Organization.identifier:MaCSKCB.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.active">
+      <path value="Organization.active" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <min value="1" />
+      <max value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+          <code value="prov" />
+          <display value="Healthcare Provider" />
+        </coding>
+        <text value="Healthcare Provider" />
+      </fixedCodeableConcept>
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+    </element>
+    <element id="Organization.alias">
+      <path value="Organization.alias" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-address" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.partOf">
+      <path value="Organization.partOf" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact">
+      <path value="Organization.contact" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.name">
+      <path value="Organization.contact.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.telecom">
+      <path value="Organization.contact.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.address">
+      <path value="Organization.contact.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-address" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

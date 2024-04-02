@@ -1,0 +1,23 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vn-core-education-level"/>
+  <url value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-education-level"/>
+  <version value="1.0"/>
+  <name value="ValueSet-VN_Core_Education_Level"/>
+  <title value="ValueSet dành cho Thông tin trình độ học vấn"/>
+  <status value="active"/>
+  <date value="2020-12-30"/>
+  <publisher value="Bộ Y tế Việt Nam"/>
+  <description value="ValueSet dành cho Thông tin trình độ học vấn - Theo ban hành Danh mục Trình độ học vấn của Tổng cục thống kê "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="VN"/>
+      <display value="Viet Nam"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-education-level"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,105 @@
+/* #segment-footer > .container {
+  background-color: #ad1f2f;
+}
+.navbar-inverse {
+  background-color: #ad1f2f;
+}
+ */
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #9b2fdd;
+}
+
+#segment-content > .container {
+  min-height: 500px;
+}
+
+#family-nav {
+  line-height: 50px;
+  float: right;
+  margin-top: 4px;
+  color: #808080;
+}
+#family-logo {
+  float: right;
+  margin-left: 6px;
+}
+
+.nav-left {	
+  line-height: 50px;
+  float: left;
+  margin-top: 4px;
+  color: #808080;
+}
+
+.logo-left {
+  float: left;
+  margin-left: 6px;
+}
+
+.nav-right {	
+  line-height: 50px;
+  float: right;
+  margin-top: 4px;
+  color: #808080;
+}
+
+.logo-right {
+  float: right;
+  margin-left: 6px;
+}
+
+
+pre.spec             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+	background: #FFFFE0 ; 
+	padding: 5px;
+	width: 100% !important;
+}
+
+pre.json             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+    background: #EFFFEF ; 
+	padding: 5px;
+	width: 100% !important;
+}
+
+pre.rdf             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+    background: #fdedff ; 
+	padding: 5px;
+	width: 100% !important;
+}
+
+pre.fhirpath             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+	background: #ffeafb ; 
+	padding: 5px;
+	width: 100% !important;
+}
+
+pre.graphql             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+    background: #f7e6ff ; 
+	padding: 5px;
+	width: 100% !important;
+}
+
+pre.xml              {
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding: 2px;
+	background: #F0FFFF;
+	width: 100% !important;
+}
+
+div.warning {
+    background-color: yellow;
+    border: 1px silver solid;
+    padding: 5px;
+}

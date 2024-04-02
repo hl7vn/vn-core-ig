@@ -1,0 +1,1092 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  	
+	<strong>Các nhóm thông tin trong QĐ số 831/QĐ-BYT </strong>
+	<ul>
+		<li>Thông tin hành chính về bệnh nhân</li>
+		<li>Thông tin về cơ sở khám, chữa bệnh</li>
+		<li>Thông tin về bác sĩ</li>
+		<li>Thông tin tiền sử và yếu tố liên quan đến sức khỏe</li>
+		<li>Thông tin tiêm chủng</li>
+		<li>Thông tin khám lâm sàng</li>
+		<li>Thông tin kết quả cận lâm sàng có giá trị chẩn đoán</li>
+		<li>Thông tin về chỉ số sinh tồn</li>
+		<li>Thông tin chẩn đoán</li>
+		<li>Thông tin về tư vấn/chỉ dẫn người bệnh</li>
+	</ul>
+	
+	<div>
+		<figure class="figure">
+		<figcaption class="figure-caption"><strong>Hình 3: Các nhóm thông tin trong HSSK cá nhân theo QĐ số 831/QĐ-BYT</strong></figcaption>
+		  <img src="qd_831.jpg" class="figure-img-portrait img-responsive img-rounded center-block"/>
+		</figure>
+		<p></p>
+	</div>
+	
+	<a name="intro"> </a>
+	<h3>Ánh xạ thông tin theo QĐ số 831/QĐ-BYT</h3>
+	<p>Bảng thông tin giới đây mô tả những thông tin tương ứng với các FHIR Resource</p>
+	
+	<a name="patient"> </a>
+	<h4>A. Thông tin hành chính, nhân khẩu học bệnh nhân</h4>
+	<table>
+	  <thead>
+		<tr>
+		  <th style="width:50%">Thông tin</th>
+		  <th style="width:25%">Core Profile</th>
+		  <th style="width:25%">FHIR Resource</th>
+		  <th> </th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>Tên</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.name.given</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Họ</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.name.family</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Họ tên đầy đủ</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.name.text</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Ngày sinh</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.birthDate</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Nơi sinh</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.extension (BirthPlace-Extension)</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Số chứng minh thư nhân dân</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.identifier</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Hộ chiếu</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.identifier</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thẻ căn cước công dân</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.identifier</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Số BHYT</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.identifier</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Dân tộc</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td> Patient.extension (Race Extension)</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Tôn giáo</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td> Patient.extension (Ethnicity Extension)</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Địa chỉ</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.address</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Số điện thoại liên hệ</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.telecom</td>
+		  <td> </td>
+		</tr>	
+		<tr>
+		  <td>Di động</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.telecom</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Email</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.telecom</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thông tin người chăm sóc/khẩn cấp</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.contact</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td style="color:red">Nhóm máu (theo hệ ABO)</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.extension (ABO-BloodType-Extension) or Observation (<a href="https://loinc.org/883-9/" target="_blank"> LOINC Code 883-9</a>)</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td style="color:red">Nhóm máu (theo hệ RH+)</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.extension (RH-BloodType-Extension) or Observation (<a href="https://loinc.org/10331-7/" target="_blank"> LOINC Code 10331-7</a>)</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td style="color:red">Nhóm máu (theo hệ ABO và RH+)</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.extension (ABO-RH-BloodType-Extension) or Observation (<a href="https://loinc.org/882-1/" target="_blank"> LOINC Code 882-1</a>)</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thông tin người chăm sóc/khẩn cấp</td>
+		  <td><a href="StructureDefinition-Patient-v1.0.html">Patient Profile</a></td>
+		  <td>Patient.contact</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thông tin về bố</td>
+		  <td><a href="#">Parent-RelatedPerson Profile</a></td>
+		  <td>RelatedPerson</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thông tin về mẹ</td>
+		  <td><a href="#">Parent-RelatedPerson Profile</a></td>
+		  <td>RelatedPerson</td>
+		  <td> </td>
+		</tr>
+	  </tbody>
+	</table>
+	
+	<a name="entity"> </a>
+	<h4>Thông tin về cơ sở khám, chữa bệnh, đội ngữ nhân viên Y tế</h4>
+	<table>
+	  <thead>
+		<tr>
+		  <th style="width:50%">Thông tin</th>
+		  <th style="width:25%">Core Profile</th>
+		  <th style="width:25%">FHIR Resource</th>
+		  <th> </th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td colspan="4"><strong>Cơ sở khám, chữa bệnh</strong></td>
+		</tr>
+		<tr>
+		  <td>Tên cơ sở khám, chữa bệnh</td>
+		  <td><a href="StructureDefinition-Provider-v1.0.html">Provider (Organization) Profile</a></td>
+		  <td>Organization.name</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Tên gọi khác</td>
+		  <td><a href="StructureDefinition-Provider-v1.0.html">Provider (Organization) Profile</a></td>
+		  <td>Organization.alias</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Địa chỉ</td>
+		  <td><a href="StructureDefinition-Provider-v1.0.html">Provider (Organization) Profile</a></td>
+		  <td>Organization.address</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thông tin liên hệ</td>
+		  <td><a href="StructureDefinition-Provider-v1.0.html">Provider (Organization) Profile</a></td>
+		  <td>Organization.telecom</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td colspan="4"><strong>Cán bộ Y tế:</strong></td>
+		</tr>
+		<tr>
+		  <td>Tên</td>
+		  <td><a href="StructureDefinition-Practitioner-v1.0.html">Practitioner Profile</a></td>
+		  <td>Practitioner.name.given</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Họ</td>
+		  <td><a href="StructureDefinition-Practitioner-v1.0.html">Practitioner Profile</a></td>
+		  <td>Practitioner.name.family</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Họ tên đầy đủ</td>
+		  <td><a href="StructureDefinition-Practitioner-v1.0.html">Practitioner Profile</a></td>
+		  <td>Practitioner.name.text</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Số chứng chỉ hành nghề</td>
+		  <td><a href="StructureDefinition-Practitioner-v1.0.html">Practitioner Profile</a></td>
+		  <td>Practitioner.identifier</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td colspan="4"><strong>Vị trí công tác</strong></td>
+		</tr>
+		<tr>
+		  <td>Vị trí công tác</td>
+		  <td><a href="StructureDefinition-PractitionerRole-v1.0.html">PractitionerRole Profile</a></td>
+		  <td>PractitionerRole</td>
+		  <td> </td>
+		</tr>
+	  </tbody>
+	</table>
+	
+	<a name="management"> </a>
+	<h4>Thông tin về quản lý bệnh nhân</h4>
+	<table>
+	  <thead>
+		<tr>
+		  <th style="width:50%">Thông tin</th>
+		  <th style="width:25%">Core Profile</th>
+		  <th style="width:25%">FHIR Resource</th>
+		  <th> </th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td colspan="4"><strong>Đợt khám, chữa bệnh</strong></td>
+		</tr>
+		<tr>
+		  <td>Mã Y tế/Số vào viện/Số bệnh án/Mã đợt thăm khám</td>
+		  <td><a href="StructureDefinition-Encounter-v1.0.html">Encounter Profile</a></td>
+		  <td>Encounter.identifier</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Bệnh nhân được điều trị</td>
+		  <td><a href="StructureDefinition-Encounter-v1.0.html">Encounter Profile</a></td>
+		  <td>Encounter.subject</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Bác sĩ tham gia điều trị</td>
+		  <td><a href="StructureDefinition-Encounter-v1.0.html">Encounter Profile</a></td>
+		  <td>Encounter.participant</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Thời điêm thăm khám</td>
+		  <td><a href="StructureDefinition-Encounter-v1.0.html">Encounter Profile</a></td>
+		  <td>Encounter.period</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Chẩn đoán (vào viện/ra viện/...)</td>
+		  <td><a href="StructureDefinition-Encounter-v1.0.html">Encounter Profile</a></td>
+		  <td>Encounter.diagnosis</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Cơ sở khám, chữa bệnh cung cấp dịch vụ</td>
+		  <td><a href="StructureDefinition-Encounter-v1.0.html">Encounter Profile</a></td>
+		  <td>Encounter.serviceProvider</td>
+		  <td> </td>
+		</tr>
+	  </tbody>
+	</table>
+	
+		
+	<a name="history"> </a>
+	<h4>B. Thông tin về bệnh sử và các yếu tố liên quan đến sức khỏe</h4>
+	<table>
+	  <thead>
+		<tr>
+		  <th style="width:50%">Thông tin</th>
+		  <th style="width:25%">Core Profile</th>
+		  <th style="width:25%">FHIR Resource</th>
+		  <th> </th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<!-- Tinh trang luc sinh-->
+		<tr>
+		  <td colspan="4"><strong>1. Tình trạng lúc sinh</strong></td>
+		</tr>
+		<tr>
+		  <td>Cân nặng lúc đẻ</td>
+		  <td><a href="#"> Birth-Weight-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/8339-4/" target="_blank"> LOINC Code 8339-4</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Chiều dài lúc đẻ</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/89269-5/" target="_blank"> LOINC Code 89269-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Dị tật bẩm sinh</td>
+		  <td><a href="#"> NewbornBirthInjury-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/32386-5/" target="_blank"> LOINC Code 32386-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Vấn đề lúc sinh khác</td>
+		  <td><a href="#"> NewbornComplication-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/32416-0/" target="_blank"> LOINC Code 32416-0</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Break section -->
+		<tr>
+		  <td colspan="4"><strong>2. Các yếu tố nguy cơ với sức khỏe cá nhân</strong></td>
+		</tr>
+		<tr>
+		  <td>Tình trạng hút thuốc lá, thuốc lào</td>
+		  <td><a href="#"> TobaccoSmokingStatus-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/72166-2/" target="_blank"> LOINC Code 72166-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tần suất hút thuốc lá, thuốc lào</td>
+		  <td><a href="#"> TobaccoUse-Overall-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/81229-7/" target="_blank"> LOINC Code 81229-7</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tình trạng uống rượu, bia</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tần suất sử dụng rượu, bia</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tình trạng sử dụng ma túy</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tần suất sử dụng ma túy</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tình trạng hoạt động thể lực</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Mô tả các hoạt động thể lực</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Mô tả các nguy cơ liên quan đến phơi nhiễm ô nhiễm các hoạt động công nghiệp</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Mô tả các nguy cơ liên quan đến môi trường sống/làm việc</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thông tin về loại hố xí gia đình</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Các nguy cơ khác</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Break section -->
+		<tr>
+		  <td colspan="4"><strong>3. Tiền sử bệnh tật, dị ứng</strong></td>
+		</tr>
+		<tr>
+		  <td>Dị ứng</td>
+		  <td><a href="#">AllergyIntolerance Profile</a></td>
+		  <td>AllergyIntolerance</td>
+		  <td> </td>
+		</tr>		
+		<tr>
+		  <td>Các bệnh đã gặp</td>
+		  <td><a href="#">Condition Profile</a></td>
+		  <td>Condition</td>
+		  <td> </td>
+		</tr>
+		<!-- Break section -->
+		<tr>
+		  <td colspan="4"><strong>4. Khuyết tật</strong></td>
+		</tr>
+		<tr>
+		  <td>Hệ thần kinh</td>
+		  <td><a href="#">NervousSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/8672-8/" target="_blank"> LOINC Code 8672-8</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tâm thần</td>
+		  <td><a href="#">PsychiatricDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11358-9/" target="_blank"> LOINC Code 11358-9</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Huyết học</td>
+		  <td><a href="#">HematologicDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10172-5/" target="_blank"> LOINC Code 10172-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ nội tiết</td>
+		  <td><a href="#">EndocrineSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10170-9/" target="_blank"> LOINC Code 10170-9</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ miễn dịch</td>
+		  <td><a href="#"> AllergenicImmunologicSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11352-2/" target="_blank"> LOINC Code 11352-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ tim mạch</td>
+		  <td><a href="#">CardiovascularDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10168-3/" target="_blank"> LOINC Code 10168-3</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khoang miệng</td>
+		  <td><a href="#"> OralCavityDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10175-8/" target="_blank"> LOINC Code 10175-8</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ hô hấp</td>
+		  <td><a href="#"> RespiratorySystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10177-4/" target="_blank"> LOINC Code 10177-4</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ tiêu hóa</td>
+		  <td><a href="#"> GastrointestinalSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11355-5/" target="_blank"> LOINC Code 11355-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ sinh dục</td>
+		  <td><a href="#"> GenitourinarySystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11356-3/" target="_blank"> LOINC Code 11356-3</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ sinh sản</td>
+		  <td><a href="#"> ReproductiveSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10176-6/" target="_blank"> LOINC Code 10176-6</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ cơ, xương, khớp</td>
+		  <td><a href="#"> MusculoskeletalSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10173-3/" target="_blank"> LOINC Code 10173-3</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Đường tiết niệu</td>
+		  <td><a href="#"> UrinaryTractDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10181-6/" target="_blank"> LOINC Code 10181-6</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh phụ khoa</td>
+		  <td><a href="#"> GynecologicSystemDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/56871-7/" target="_blank"> LOINC Code 56871-7</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Truyền máu</td>
+		  <td><a href="#">BloodTransfusion-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/56836-0/" target="_blank"> LOINC Code 56836-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh tân khoa</td>
+		  <td><a href="#">NeoplasticDisease-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/56837-8/" target="_blank"> LOINC Code 56837-8</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh truyền nhiễm</td>
+		  <td><a href="#">InfectiousDisease-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/56838-6/" target="_blank"> LOINC Code 56838-6</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh da liễu</td>
+		  <td><a href="#">SkinDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10178-2/" target="_blank"> LOINC Code 10178-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh liên quan đến vú</td>
+		  <td><a href="#">BreastsDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11353-0/" target="_blank"> LOINC Code 11353-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh về mắt</td>
+		  <td><a href="#">EyesDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10171-7/" target="_blank"> LOINC Code 10171-7</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh về tai</td>
+		  <td><a href="#">EarDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10169-1/" target="_blank"> LOINC Code 10169-1</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh về mũi</td>
+		  <td><a href="#">NoseDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10174-1/" target="_blank"> LOINC Code 10174-1</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Bệnh về tai, mũi, họng</td>
+		  <td><a href="#">Ears-Nose-Sinuses-Mouth-ThroatDisorders-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11354-8/" target="_blank"> LOINC Code 11354-8</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Break section -->
+		<tr>
+		  <td colspan="4"><strong>5. Tiền sử phẫu thuật</strong></td>
+		</tr>
+		<tr>
+		  <td>Mô tả về tiền sử phẫu thuật</td>
+		  <td><a href="#">SurgicalProcedures-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10167-5/" target="_blank"> LOINC Code 10167-5</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Tiền sử gia đình-->
+		<tr>
+		  <td colspan="4"><strong>6. Tiền sử gia đình</strong></td>
+		</tr>
+		<tr>
+		  <td>Người mắc</td>
+		  <td><a href="#">FamilyMemberHistory Profile</a></td>
+		  <td>FamilyMemberHistory.name</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Mối quan hệ</td>
+		  <td><a href="#">FamilyMemberHistory Profile</a></td>
+		  <td>FamilyMemberHistory.relationship</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Giới tính</td>
+		  <td><a href="#">FamilyMemberHistory Profile</a></td>
+		  <td>FamilyMemberHistory.sex</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Bệnh sử</td>
+		  <td><a href="#">FamilyMemberHistory Profile</a></td>
+		  <td>FamilyMemberHistory.condition</td>
+		  <td> </td>
+		</tr>
+		<tr>
+		  <td>Dị ứng</td>
+		  <td><a href="#">FamilyMemberHistory Profile</a></td>
+		  <td>FamilyMemberHistory.condition</td>
+		  <td> </td>
+		</tr>
+		<!-- Thong tin ve suc khoe sinh san va ke hoach hoa gia dinh -->
+		<tr>
+		  <td colspan="4"><strong>7. Thông tin về sức khỏe sinh sản và kế hoạch hóa gia đình</strong></td>
+		</tr>
+		<tr>
+		  <td>Biện pháp tránh thai đang dùng</td>
+		  <td><a href="#"> BirthControlMethod-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/8659-5/" target="_blank"> LOINC Code 8659-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Kỳ kinh cuối</td>
+		  <td><a href="#"> LastMenstrualPeriodStartDate-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/8665-2/" target="_blank"> LOINC Code 8665-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thời điểm có thai cuối cùng</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần có thai</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần có thai ngoài tử cung</td>
+		  <td><a href="#"> EctopicPregnancy-Total-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/33065-4/" target="_blank"> LOINC Code 33065-4</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần sảy thai</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần phá thai</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần sinh đẻ</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11640-0/" target="_blank"> LOINC Code 11640-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần đẻ thường</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần đẻ mổ</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/68497-7/" target="_blank"> LOINC Code 68497-7</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần đẻ khó</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần đẻ đủ tháng</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số lần đẻ non</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank"> LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số con hiện sống</td>
+		  <td><a href="#"> StillLiveBirths-Total-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11638-4/" target="_blank" > LOINC Code 11638-4</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Số con đã sinh nhưng đã mất</td>
+		  <td><a href="#"> PreviousLiveBirthsNowDead-Total-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/68496-9/" target="_blank" > LOINC Code 68496-9</a>)</td>
+		  <td></td>
+		</tr>
+	  </tbody>
+	</table>	
+	
+	<a name="clinical-support"> </a>
+	<h4>C. Tiêm chủng</h4>
+	<table>
+	  <thead>
+		<tr>
+		  <th style="width:50%">Thông tin</th>
+		  <th style="width:25%">Core Profile</th>
+		  <th style="width:25%">FHIR Resource</th>
+		  <th> </th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<!-- Break section -->
+		<tr>
+		  <td>Thông tin tiêm chủng</td>
+		  <td><a href="#">Immunization Profile</a></td>
+		  <td>Immunization</td>
+		  <td> </td>
+		</tr>
+		<!-- Break section -->
+		<tr>
+		  <td style="padding-left: 10px;"><strong>Một số trường hợp đặc biệt về tình trạng tiêm chủng</strong></td>
+		  <td></td>
+		  <td></td>
+		  <td> </td>
+		</tr>		
+		<tr>
+		  <td>Chủng ngừa Virus Cúm</td>
+		  <td><a href="#">InfluenzaVirusImmunizationStatus-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/55262-0/" target="_blank"> LOINC Code 55262-0</a>)</td>
+		  <td></td>
+		</tr>		
+		<tr>
+		  <td>Chủng ngừa ho gà</td>
+		  <td><a href="#">BordetellaPertussisImmunizationStatus-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/55263-8/" target="_blank"> LOINC Code 55263-8</a>)</td>
+		  <td></td>
+		</tr>		
+		<tr>
+		  <td>Chủng ngừa Viêm gan A</td>
+		  <td><a href="#">HepatitisAVirusImmunizationStatus-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/55276-0/" target="_blank"> LOINC Code 55276-0</a>)</td>
+		  <td></td>
+		</tr>		
+		<tr>
+		  <td>Chủng ngừa bại liệt</td>
+		  <td><a href="#">PolioVirusImmunizationStatus-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/55273-7/" target="_blank"> LOINC Code 55273-7</a>)</td>
+		  <td></td>
+		</tr>
+	  </tbody>
+	</table>
+	
+	<a name="examinition"> </a>
+	<h4>D. Thông tin về khám lâm sàng</h4>
+	<table>
+	  <thead>
+		<tr>
+		  <th style="width:50%">Thông tin</th>
+		  <th style="width:25%">Core Profile</th>
+		  <th style="width:25%">FHIR Resource</th>
+		  <th> </th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td colspan="4"><strong>1. Bệnh sử</strong></td>
+		</tr>
+		<tr>
+		  <td>Bệnh sử</td>
+		  <td><a href="StructureDefinition-Observation-Hx-PastIllness_v1.0.html">PastIllness-Hx-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11348-0/" target="_blank"> LOINC Code 11348-0)</a></td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td colspan="4"><strong>2. Thăm khám</strong></td>
+		</tr>	
+		<!-- Break-->		
+		<tr>
+		  <td colspan="4"><strong>2.1. Dấu hiệu sinh tồn, chỉ số nhân trắc học</strong></td>
+		</tr>
+		<tr>
+		  <td>Tâm trương</td>
+		  <td><a href="http://hl7.org/fhir/R4/bp.html">Blood pressure systolic and diastolic</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tâm thu</td>
+		  <td><a href="http://hl7.org/fhir/R4/bp.html">Blood pressure systolic and diastolic</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Chiều cao</td>
+		  <td><a href="http://hl7.org/fhir/R4/bodyheight.html">Body height</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Cân nặng</td>
+		  <td><a href="http://hl7.org/fhir/R4/bodyweight.html">Body weight</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Nhịp tim</td>
+		  <td><a href="http://hl7.org/fhir/R4/heartrate.html">Heart rate</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Nhịp thở</td>
+		  <td><a href="http://hl7.org/fhir/R4/resprate.html">Respiratory rate</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Nhiệt độ cơ thể</td>
+		  <td><a href="http://hl7.org/fhir/R4/bodytemp.html">Body temperature</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Chỉ số BMI (%) theo độ tuổi và giới tính dành cho độ tuổi từ 2-20 tuổi</td>
+		  <td><a href="https://www.hl7.org/fhir/bmi.html">FHIR Body Mass Index (BMI) Profile</a> (FHIR Core Profile)</td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Vòng bụng</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/8280-0/" target="_blank" > LOINC Code 8280-0</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Break-->	
+		<tr>
+		  <td colspan="4"><strong>2.2 Thị lực</strong></td>
+		</tr>
+		<tr>
+		  <td>Thị lực mắt phải (không kính) - Corneal curvature [Inverse Length] Right cornea by Keratometry</td>
+		  <td><a href="#">Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/79813-2/" target="_blank" > LOINC Code 79813-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thị lực mắt trái (không kính) - Corneal curvature [Inverse Length] Left cornea by Keratometry</td>
+		  <td><a href="#">Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/79814-0/" target="_blank" > LOINC Code 79814-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thị lực mắt phải (có kính)</td>
+		  <td><a href="#">Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thị lực mắt phải (có kính)</td>
+		  <td><a href="#">Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Break-->
+		<tr>
+		  <td colspan="4"><strong>2.3. Khám lâm sàng</strong></td>
+		</tr>		
+		<tr>
+		  <td>Toàn trạng</td>
+		  <td><a href="StructureDefinition-Observation-GeneralStatus.html">GeneralStatus-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10210-3/" target="_blank" > LOINC Code 10210-3</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ tim mạch</td>
+		  <td><a href="StructureDefinition-Observation-CardiovascularSystem-Findings.html"> CardiovascularSystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11390-2/" target="_blank" > LOINC Code 11390-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ hô hấp</td>
+		  <td><a href="StructureDefinition-Observation-RespiratorySystem-Findings.html"> RespiratorySystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11412-4/" target="_blank" > LOINC Code 11412-4</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tiêu hóa</td>
+		  <td><a href="StructureDefinition-Observation-GastrointestinalSystem-Findings.html"> GastrointestinalSystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11399-3/" target="_blank" > LOINC Code 11399-3</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khám tai, mũi, họng</td>
+		  <td><a href="StructureDefinition-Observation-Ears-Nose-Mouth-Throat-Findings.html"> Ears-Nose-Mouth-Throat-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11393-6/" target="_blank" > LOINC Code 11393-6</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khám răng, hàm, mặt</td>
+		  <td><a href="StructureDefinition-Observation-Mouth-Throat-Teeth-Findings.html"> Mouth-Throat-Teeth-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10201-2/" target="_blank" > LOINC Code 10201-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tiết niệu</td>
+		  <td><a href="StructureDefinition-Observation-GenitourinaryTract-Findings.html"> GenitourinaryTract-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10198-0/" target="_blank" > LOINC Code 10198-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Cơ xương khớp</td>
+		  <td><a href="StructureDefinition-Observation-MusculoskeletalSystem-Findings.html"> MusculoskeletalSystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11410-8/" target="_blank" > LOINC Code 11410-8</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Nội tiết</td>
+		  <td><a href="StructureDefinition-Observation-NervousSystem-Findings.html"> EndocrineSystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/29307-6/" target="_blank" > LOINC Code 29307-6</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Hệ thống huyết học và bạch huyết và miễn dịch</td>
+		  <td><a href="StructureDefinition-Observation-Hematologic-Lymphatic-ImmunologicSystem-Findings.html"> Hematologic-Lymphatic-ImmunologicSystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11447-0/" target="_blank" > LOINC Code 11447-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thần kinh</td>
+		  <td><a href="#"> NervousSystem-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10202-0/" target="_blank" > LOINC Code 10202-0</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Tâm thần</td>
+		  <td><a href="#"> Psychiatric-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11451-2/" target="_blank" > LOINC Code 11451-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Ngoại khoa</td>
+		  <td><a href="#"> PhysicalExamByBodyAreas-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/55286-9/" target="_blank" > LOINC Code 55286-9</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khám cơ quan sinh dục (chung)</td>
+		  <td><a href="#">  Genitalia-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11400-9/" target="_blank" > LOINC Code 11400-9</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khám cơ quan sinh dục (nam)</td>
+		  <td><a href="#"> MaleGenitalia-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11402-5/" target="_blank" > LOINC Code 11402-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khám cơ quan sinh dục (nữ)</td>
+		  <td><a href="#"> FemaleGenitalia-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/11401-7/" target="_blank" > LOINC Code 11401-7</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td style='color:red'>Sản phụ khoa</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="#" target="_blank" > LOINC Code *</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Mắt</td>
+		  <td><a href="#"> Eye-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10197-2/" target="_blank" > LOINC Code 10197-2</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Da liễu</td>
+		  <td><a href="#"> Skin-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10206-1/" target="_blank" > LOINC Code 10206-1</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Dinh dưỡng</td>
+		  <td><a href="#"> NutritionAssessment-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/75303-8/" target="_blank" > LOINC Code 75303-8</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Đánh giá khả năng phản xạ chính</td>
+		  <td><a href="#"> PrimitiveReflexes-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/56876-6/" target="_blank" > LOINC Code 56876-6</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Đánh giá khả năng phản xạ của não bộ</td>
+		  <td><a href="#"> BrainStemReflexes-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/56873-3/" target="_blank" > LOINC Code 56873-3</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Đánh giá khả năng cân bằng và điều phối thần kinh</td>
+		  <td><a href="#"> NeurologicBalance-Coordination-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10209-5/" target="_blank" > LOINC Code 10209-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Đánh giá khả năng nhận diện cảm giác</td>
+		  <td><a href="#"> Sensation-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/32473-1/" target="_blank" > LOINC Code 32473-1</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Neurologic deep tendon reflexes</td>
+		  <td><a href="#"> NeurologicDeepTendonReflexes-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10194-9/" target="_blank" > LOINC Code 10194-9</a>)</td>
+		  <td></td>
+		</tr>		
+		<tr>
+		  <td>Vận động</td>
+		  <td><a href="#"> MotorFunction-Findings-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/32452-5/" target="_blank" > LOINC Code 32452-5</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Thể chất</td>
+		  <td><a href="#"> Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/10212-9/" target="_blank" > LOINC Code 10212-9</a>)</td>
+		  <td></td>
+		</tr>
+		<tr>
+		  <td>Khác</td>
+		  <td><a href="#"> FunctionalStatusAssessmentNote-Observation Profile</a></td>
+		  <td>Observation (<a href="https://loinc.org/47420-5/" target="_blank" > LOINC Code 47420-5</a>)</td>
+		  <td></td>
+		</tr>
+		<!-- Break -->	
+		<tr>
+		  <td colspan="4"><strong>3. Cận lâm sàng:</strong></td>
+		</tr>
+		<tr>
+		  <td>Kết quả cận lâm sàng có giá trị chẩn đoán</td>
+		  <td><a href="#">Laboratory Result Observation Profile</a></td>
+		  <td>Observation</td>
+		  <td> </td>
+		</tr>
+		<!-- Break -->	
+		<tr>
+		  <td colspan="4"><strong>4. Chẩn đoán:</strong></td>
+		</tr>
+		<tr>
+		  <td>Chẩn đoán bệnh</td>
+		  <td><a href="StructureDefinition-Condition-Encounter-Diagnosis-v1.0.html">Condition-EncounterDiagnosis- Profile</a></td>
+		  <td>Condition</td>
+		  <td> </td>
+		</tr>
+		<!-- Break -->	
+		<tr>
+		  <td colspan="4"><strong>5. Tư vấn:</strong></td>
+		</tr>
+		<tr>
+		  <td>Tư vấn/chỉ dẫn người bệnh</td>
+		  <td><a href="#">Observation Profile</a></td>
+		  <td>Observation</td>
+		  <td> </td>
+		</tr>
+	  </tbody>
+	</table>
+</div>

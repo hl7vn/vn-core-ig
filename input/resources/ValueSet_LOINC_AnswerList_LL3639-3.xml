@@ -1,0 +1,47 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="LL3639-3"/>
+   <meta>
+      <versionId value="4"/>
+      <lastUpdated value="2019-12-15T20:32:11.097+00:00"/>
+   </meta>
+   <url value="http://loinc.org/vs/LL3639-3"/>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:1.3.6.1.4.1.12009.10.1.2273"/>
+   </identifier>
+   <version value="Loinc_2.67"/>
+   <name value="Positive|Negative|Not tested|Unknown"/>
+   <title value="LOINC® LL3639-3 - ValueSet về trạng thái lây nhiễm"/>
+   <description value="LOINC® LL3639-3 - ValueSet về trạng thái lây nhiễm"/>
+   <status value="active"/>
+   <publisher value="Regenstrief Institute, Inc."/>
+   <contact>
+      <name value="Regenstrief Institute, Inc."/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://loinc.org"/>
+      </telecom>
+   </contact>
+   <copyright value="This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at https://loinc.org/license/"/>
+   <compose>
+      <include>
+         <system value="http://loinc.org"/>
+         <concept>
+            <code value="LA13538-6"/>
+            <display value="Chưa xét nghiệm"/>
+         </concept>
+         <concept>
+            <code value="LA4489-6"/>
+            <display value="Không xác định"/>
+         </concept>
+         <concept>
+            <code value="LA6576-8"/>
+            <display value="Dương tính"/>
+         </concept>
+         <concept>
+            <code value="LA6577-6"/>
+            <display value="Âm tính"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

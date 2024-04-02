@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-address" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:12:05.237+00:00" />
+  </meta>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-address" />
+  <version value="1.0.0" />
+  <name value="VNCoresAddress" />
+  <title value="Address profile - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:12:03.0794446+00:00" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="VN Core Address profile" />
+  <purpose value="Vietnam Core Address profile" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <mapping>
+    <identity value="vcard" />
+    <uri value="http://w3.org/vcard" />
+    <name value="vCard Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:addressExtension">
+      <path value="Address.extension" />
+      <sliceName value="addressExtension" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-administrative-address" />
+      </type>
+    </element>
+    <element id="Address.use">
+      <path value="Address.use" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.text">
+      <path value="Address.text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.line">
+      <path value="Address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.city">
+      <path value="Address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.state">
+      <path value="Address.state" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.country">
+      <path value="Address.country" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,769 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  	
+	<strong>Các nhóm thông tin trong QĐ số 4210/QĐ-BYT </strong>
+	<ul>
+		<li>Thông tin hành chính về bệnh nhân</li>
+		<li>Thông tin về cơ sở khám, chữa bệnh</li>
+		<li>Thông tin về bác sĩ</li>
+		<li>Thông tin về đợt khám, chữa bệnh</li>
+		<li>Thông tin về chỉ định và kê đơn thuốc</li>
+		<li>Thông tin về chỉ địch dịch vụ, vật tư y tế</li>
+		<li>Thông tin kết quả cận lâm sàng</li>
+		<li>Thông tin về diễn biến lâm sàng</li>
+		<li>Thông tin về các chi phí liên quan</li>
+	</ul>
+	
+	<div>
+		<figure class="figure">
+		<figcaption class="figure-caption"><strong>Hình 3: Các nhóm thông tin theo QĐ số 4210/QĐ-BYT</strong></figcaption>
+		  <img src="qd_4210.jpg" class="figure-img-portrait img-responsive img-rounded center-block"/>
+		</figure>
+		<p></p>
+	</div>
+	
+	<a name="intro"> </a>
+	<h3>Ánh xạ thông tin theo QĐ số 4210/QĐ-BYT</h3>
+	<p>Bảng thông tin giới đây mô tả những thông tin tương ứng với các FHIR Resource</p>
+	
+	<a name="table_1"> </a>
+	<h4>Bảng 1. Chỉ tiêu tổng hợp khám bệnh, chữa bệnh BHYT</h4>
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th style="width:15%">Thông tin</th>
+		  <th style="width:40%">Diễn giải</th>
+		  <th style="width:20%">FHIR Resource</th>
+		  <th style="width:15%">Core Profile</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>MA_LK</td>
+		  <td>Mã đợt điều trị duy nhất (dùng để liên kết giữa bảng tổng hợp (bảng 1) và các bảng chi tiết (từ bảng 2 đến bảng 5) trong 1 lần khám bệnh, chữa bệnh (PRIMARY KEY)).</td>
+		  <td>Encounter.id</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>STT</td>
+		  <td>STT tăng từ 1 đến hết trong 1 lần gửi dữ liệu</td>
+		  <td>Claim.id</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BN</td>
+		  <td>Mã số bệnh nhân quy định tại cơ sở khám bệnh, chữa bệnh.</td>
+		  <td>Patient.identifier</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>HO_TEN</td>
+		  <td>Họ và tên người bệnh</td>
+		  <td>Patient.name.text</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_SINH</td>
+		  <td>Ngày sinh ghi trên thẻ gồm 8 ký tự; 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày (nếu không có ngày sinh và tháng sinh thì mặc định là 0101)</td>
+		  <td>Patient.birthDate</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>GIOI_TINH</td>
+		  <td>Giới tính; Mã hóa (1: Nam; 2: Nữ; 3: Chưa xác định)</td>
+		  <td>Patient.gender</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DIA_CHI</td>
+		  <td>Ghi địa chỉ theo địa chỉ trên thẻ BHYT hoặc nơi cư trú hiện tại của người bệnh: số nhà (nếu có); đường/phố (nếu có); xã/phường/thị trấn; quận/huyện/thị xã/thành phố trực thuộc tỉnh; tỉnh/thành phố trực thuộc TW</td>
+		  <td>Patient.address</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_THE</td>
+		  <td>Mã thẻ BHYT do cơ quan BHXH cấp</td>
+		  <td>Patient.identifier</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_DKBD</td>
+		  <td>Mã cơ sở khám bệnh, chữa bệnh nơi người bệnh đăng ký ban đầu ghi trên thẻ BHYT, gồm có 5 ký tự.</td>
+		  <td>Patient.identifier.extension</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>GT_THE_TU</td>
+		  <td>Thời điểm thẻ có giá trị gồm 8 ký tự; 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày</td>
+		  <td>Patient.identifier.period.start</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>GT.THE_DEN</td>
+		  <td>Thời điểm thẻ hết giá trị gồm 8 ký tự; 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày</td>
+		  <td>Patient.identifier.period.end</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MIEN_CUNG_CT</td>
+		  <td>Thời điểm người bệnh bắt đầu được hưởng miễn cùng chi trả theo giấy xác nhận của cơ quan BHXH, gồm 08 ký tự, trong đó: 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày</td>
+		  <td>Patient.identifier.extension</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TEN_BENH</td>
+		  <td>Ghi đầy đủ các chẩn đoán được ghi trong hồ sơ, bệnh án</td>
+		  <td>Condition.code</td>
+		  <td><a href="#">Encounter-Diagnosis-Condition Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BENH</td>
+		  <td>Mã bệnh chính theo ICD 10 hoặc mã bệnh y học cổ truyền</td>
+		  <td>Condition.code</td>
+		  <td><a href="#">Encounter-Diagnosis-Condition Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BENHKHAC</td>
+		  <td>Mã bệnh kèm theo (nếu có) theo ICD 10 hoặc mã bệnh y học cổ truyền. Trường hợp có nhiều mã thì được phân cách bằng dấu “;”</td>
+		  <td>Condition.code</td>
+		  <td><a href="#">Encounter-Diagnosis-Condition Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_LYDO_VVIEN</td>
+		  <td>Mã hóa đối tượng đến khám BHYT (1: Đúng tuyến; 2: Cấp cứu; 3: Trái tuyến, 4: Thông tuyến)</td>
+		  <td>Encounter.reasonCode</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_NOI_CHUYEN</td>
+		  <td>Mã cơ sở khám bệnh, chữa bệnh chuyển người bệnh đến (mã do cơ quan BHXH cấp)</td>
+		  <td>Encounter.hospitalization.origin</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_TAI_NAN</td>
+		  <td>Tai nạn thương tích; Mã hóa tham chiếu bảng 8 (Bảng tai nạn thương tích) ban hành kèm theo quyết định này</td>
+		  <td>Claim.accident.type</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_VAO</td>
+		  <td>Thời điểm người bệnh đến khám bệnh, chữa bệnh, gồm 12 ký tự, trong đó: 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (định dạng theo 24 giờ) + 2 ký tự phút.</td>
+		  <td>Encounter.hospitalization.start</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_RA</td>
+		  <td>Thời điểm ra viện, gồm 12 ký tự, trong đó: 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (định dạng theo 24 giờ) + 2 ký tự phút.</td>
+		  <td>Encounter.hospitalization.end</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>SO_NGAY_DTRI</td>
+		  <td>Số ngày điều trị thực tế</td>
+		  <td>Encounter.length</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>KET_QUA_DTRI</td>
+		  <td>Kết quả điều trị; Mã hóa (1: Khỏi; 2: Đỡ; 3: Không thay đổi; 4: Nặng hơn; 5: Tử vong)</td>
+		  <td>Condition.clinicalStatus</td>
+		  <td><a href="#">Condition Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TINH_TRANG_RV</td>
+		  <td>Tình trạng ra viện; Mã hóa (1: Ra viện; 2: Chuyển viện; 3: Trốn viện; 4: Xin ra viện)</td>
+		  <td>Encounter.hospitalization.dischargeDisposition</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_TTOAN</td>
+		  <td>Thời điểm ra viện, gồm 12 ký tự, trong đó: 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (định dạng theo 24 giờ) + 2 ký tự phút.</td>
+		  <td>Claim.created</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_THUOC</td>
+		  <td>Tổng thành tiền các khoản chi thuốc (kể cả oxy), dịch truyền, máu và chế phẩm máu (đã bao gồm chi phí xét nghiệm NAT và kháng thể bất thường, KIT gạn tách tiểu cầu), chi phí vận chuyển máu và chi phí bao bì (đối với thuốc thang) trên file XML2, làm tròn số đến hai chữ số thập phân. Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_VTYT</td>
+		  <td>Tổng thành tiền vật tư y tế trên file XML3, làm tròn số đến hai chữ số thập phân. Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_TONGCHI</td>
+		  <td>Tổng chi phí trong lần khám bệnh hoặc trong đợt điều trị, là tổng thành tiền trên XML2, XML3, làm tròn đến hai chữ số thập phân. Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BNTT</td>
+		  <td>Tổng số tiền người bệnh tự trả ngoài phạm vi chi trả của Quỹ BHYT trên XML2, XML3, làm tròn đến hai chữ số thập phân. Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BHTT</td>
+		  <td>Tổng số tiền đề nghị cơ quan bảo hiểm xã hội thanh toán trên XML2, XML3, làm tròn đến hai chữ số thập phân. Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_NGUONKHAC</td>
+		  <td>Tổng số tiền người bệnh được các nguồn tài chính khác chi trả trên XML2, XML3, làm tròn đến hai chữ số thập phân. Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_NGOAIDS</td>
+		  <td>Chi phí ngoài định suất, làm tròn số đến 2 chữ số thập phân, Sử dụng dấu Chấm (“.”) để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NAM_QT</td>
+		  <td>Năm đề nghị cơ quan bảo hiểm xã hội thanh toán</td>
+		  <td>Claim.billablePeriod</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>THANG_QT</td>
+		  <td>Tháng đề nghị cơ quan bảo hiểm xã hội thanh toán</td>
+		  <td>Claim.billablePeriod</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_LOAI_KCB</td>
+		  <td>Mã hóa hình thức khám bệnh, chữa bệnh (1: Khám bệnh; 2: Điều trị ngoại trú; 3: Điều trị nội trú)</td>
+		  <td>Encounter.class</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_KHOA</td>
+		  <td>Mã khoa, nếu bệnh nhân điều trị ở nhiều khoa thì ghi mã khoa thực hiện tổng kết hồ sơ bệnh án</td>
+		  <td>Encounter.serviceType</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_CSKCB</td>
+		  <td>Mã cơ sở khám bệnh, chữa bệnh nơi điều trị (Mã do cơ quan bảo hiểm xã hội cấp)</td>
+		  <td>Encounter.identifier</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_KHUVUC</td>
+		  <td>Ghi mã nơi sinh sống trên thẻ "K1 hoặc K2 hoặc K3"</td>
+		  <td>Patient.identifier</td>
+		  <td><a href="#">Patient Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_PTTT_QT</td>
+		  <td>Mã phẫu thuật thủ thuật Quốc tế (theo ICD 9 CM Vol 3) cho phẫu thuật, thủ thuật (Triển khai sau khi Bộ Y tế ban hành bảng tham chiếu và có văn bản chỉ đạo). Nếu có nhiều phẫu thuật thủ thuật thì mỗi mã cách nhau bởi dấu chấm phẩy (;)</td>
+		  <td>Claim.procedure</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>CAN_NANG</td>
+		  <td>Chỉ thu thập với các bệnh nhân là trẻ em dưới 1 tuổi. Là số kilogam (kg) cân nặng của trẻ em khi vào viện.</td>
+		  <td>Observation </td>		  		  
+		  <td><a href="http://hl7.org/fhir/R4/bodyweight.html">Body weight</a> (FHIR Core Profile)</td>
+		</tr>
+	  </tbody>
+	</table>
+	
+	<a name="table_2"> </a>
+	<h4>Bảng 2. Chỉ tiêu chi tiết thuốc thanh toán BHYT</h4>
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th style="width:15%">Thông tin</th>
+		  <th style="width:40%">Diễn giải</th>
+		  <th style="width:20%">FHIR Resource</th>
+		  <th style="width:15%">Core Profile</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>MA_LK</td>
+		  <td>Mã đợt điều trị duy nhất (Dùng để liên kết giữa bảng tổng hợp (Bảng 1) và bảng này trong 1 lần khám bệnh, chữa bệnh).</td>
+		  <td>Encounter.id</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>STT</td>
+		  <td>Từ 1 đến hết trong một lần gửi dữ liệu</td>
+		  <td>Claim.id</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_THUOC</td>
+		  <td>Mã hoạt chất theo quy định tại Bộ mã danh mục dùng chung do Bộ Y tế ban hành;</td>
+		  <td>Medication.code</td>
+		  <td><a href="#">Medication Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_NHOM</td>
+		  <td>Dùng để phân loại, sắp xếp các chi phí vào các mục tương ứng (tham chiếu phụ lục Bảng 6 ban hành kèm theo Quyết định này)</td>
+		  <td>MedicationStatement.category</td>
+		  <td><a href="#">MedicationStatement Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TEN_THUOC</td>
+		  <td>Tên thuốc ghi đúng theo tên được Cục Quản lý Dược hoặc Cục Quản lý Y, dược cổ truyền cấp số đăng ký</td>
+		  <td>Medication.code.text</td>
+		  <td><a href="#">Medication Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DON_VI_TINH</td>
+		  <td>Đơn vị tính nhỏ nhất, ghi đúng theo đơn vị tính của thuốc được Cục Quản lý Dược hoặc Cục Quản lý Y, dược cổ truyền công bố;</td>
+		  <td>MedicationStatement.dosage</td>
+		  <td><a href="#">MedicationStatement Profile</a></td>
+		</tr>
+		<tr>
+		  <td>HAM_LUONG</td>
+		  <td>Hàm lượng ghi đúng theo hàm lượng của thuốc được Cục Quản lý Dược hoặc Cục Quản lý Y, dược cổ truyền cấp số đăng ký; nếu thuốc có nhiều hoạt chất thì ghi hàm lượng của các hoạt chất, giữa các hàm lượng cách nhau bằng dấu chấm phẩy (;)</td>
+		  <td>MedicationStatement.dosage</td>
+		  <td><a href="#">MedicationStatement Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DUONG_DUNG</td>
+		  <td>Đường dùng của thuốc ghi mã đường dùng quy định tại Bộ mã danh mục dùng chung do Bộ Y tế ban hành</td>
+		  <td>MedicationStatement.dosage</td>
+		  <td><a href="#">MedicationStatement Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>LIEU_DUNG</td>
+		  <td>Liều dùng: số lượng thuốc dùng trong một lần sử dụng * số lần trong ngày</td>
+		  <td>MedicationStatement.dosage</td>
+		  <td><a href="#">MedicationStatement Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>SO_DANG_KY</td>
+		  <td>Số đăng ký của thuốc do Bộ Y tế hoặc Cục Quản lý Dược hoặc Cục Quản lý Y, dược cổ truyền ban hành (giữa các ký tự không có khoảng trống (space)).</td>
+		  <td>Medication.identifier</td>
+		  <td><a href="#">Medication Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TT_THAU</td>
+		  <td>Ghi thông tin thầu của thuốc gồm: số quyết định trúng thầu, gói thầu, nhóm thầu theo danh mục đã thống nhất với cơ quan BHXH, cách nhau bằng dấu “;”. Mã gói thầu và nhóm thầu tham chiếu bảng 9.</td>
+		  <td>Medication.extension</td>
+		  <td><a href="#">Medication Profile</a></td>
+		</tr>
+		<tr>
+		  <td>PHAM_Vl</td>
+		  <td>Ghi mã phạm vi của thuốc, trong đó (1): Thuốc trong phạm vi hưởng BHYT (trong danh mục thuốc do quỹ BHYT chi trả); (2): Thuốc ngoài phạm vi hưởng BHYT (ngoài danh mục thuốc do quỹ BHYT chi trả)</td>
+		  <td>Medication.extension</td>
+		  <td><a href="#">Medication Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TYLE_TT</td>
+		  <td>Tỷ lệ thanh toán BHYT đối với thuốc có quy định tỷ lệ (%); Biểu thị bằng số nguyên dương</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>SO_LUONG</td>
+		  <td>Số lượng thuốc thực tế sử dụng, làm tròn số đến 3 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.quantity</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DON_GIA</td>
+		  <td>Ghi đơn giá của thuốc, là giá theo hóa đơn mua vào của cơ sở KCB; làm tròn đến 3 (ba) chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên</td>
+		  <td>Claim.item.unitPrice</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>THANH_TIEN</td>
+		  <td>= SO_LUONG * DON_GIA, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.net</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MUC_HUONG</td>
+		  <td>Ghi mức hưởng tương ứng với từng loại chi phí</td>
+		  <td>Claim.item.factor</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_NGUON KHAC</td>
+		  <td>Số tiền người bệnh được các nguồn tài chính khác hỗ trợ, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.detail</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BNTT</td>
+		  <td>Số tiền người bệnh tự trả ngoài phạm vi chi trả của Quỹ bảo hiểm y tế, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.detail</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BHTT</td>
+		  <td>Số tiền đề nghị cơ quan BHXH thanh toán theo phạm vi quyền lợi hưởng BHYT, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.detail</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BNCCT</td>
+		  <td>Số tiền người bệnh cùng chi trả trong phạm vi quyền lợi được hưởng bảo hiểm y tế, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.detail</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_NGOAIDS</td>
+		  <td>T_NGOAIDS = T_BHTT đối với các chi phí ngoài định suất, làm tròn số đến 2 chữ số thập phân, Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.detail</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_KHOA</td>
+		  <td>Mã khoa bệnh nhân được chỉ định sử dụng thuốc (tham chiếu phụ lục Bảng 7)</td>
+		  <td>MedicationStatement.informationSource</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BAC_SI</td>
+		  <td>Mã bác sỹ khám và chỉ định (mã hóa theo số ghi trên Chứng chỉ hành nghề)</td>
+		  <td>MedicationStatement.extension</td>
+		  <td><a href="#">MedicationStatement Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BENH</td>
+		  <td>Mã bệnh chính (theo ICD 10) và/hoặc mã bệnh y học cổ truyền được bác sỹ, y sỹ y học cổ truyền chẩn đoán; nếu có các bệnh khác kèm theo thì ghi các mã bệnh tương ứng, cách nhau bằng dấu chấm phẩy (;)</td>
+		  <td>Condition.code</td>
+		  <td><a href="#">Encounter-Diagnosis-Condition Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_YL</td>
+		  <td>Ngày ra y lệnh (gồm 12 ký tự, theo cấu trúc; yyyymmddHH:mm = 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (24 giờ) + 2 ký tự phút)</td>
+		  <td>MedicationStatement.effectiveDateTime</td>
+		  <td><a href="#">MedicationStatement Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_PTTT</td>
+		  <td>Mã phương thức thanh toán (0: Phí dịch vụ; 1 : định suất; 2 : ngoài định suất; 3: DRG)</td>
+		  <td>Claim.item.revenue</td>
+		  <td><a href="#">Claim Profile Profile</a></td>
+		</tr>		
+	  </tbody>
+	</table>
+	
+	<a name="table_3"> </a>
+	<h4>Bảng 3. Chỉ tiêu chi tiết dịch vụ kỹ thuật và vật tư y tế thanh toán BHYT</h4>
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th style="width:15%">Thông tin</th>
+		  <th style="width:40%">Diễn giải</th>
+		  <th style="width:20%">FHIR Resource</th>
+		  <th style="width:15%">Core Profile</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>MA_LK</td>
+		  <td>Mã đợt điều trị duy nhất (Dùng để liên kết giữa bảng tổng hợp (Bảng 1) và bảng này trong 1 lần khám bệnh, chữa bệnh).</td>
+		  <td>Encounter.id</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>STT</td>
+		  <td>Từ 1 đến hết trong một lần gửi dữ liệu</td>
+		  <td>Claim.id</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_DICH_VU</td>
+		  <td>Mã dịch vụ kỹ thuật thực hiện theo quy định tại Bộ mã danh mục dùng chung do Bộ Y tế ban hành;</td>
+		  <td>Procedure.code</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_VAT_TU</td>
+		  <td>Mã vật tư y tế thực hiện quy định tại Bộ mã danh mục dùng chung do Bộ Y tế ban hành; chỉ ghi các vật tư y tế chưa có trong cơ cấu giá dịch vụ kỹ thuật</td>
+		  <td>Substance.code</td>
+		  <td><a href="#">Substance Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_NHOM</td>
+		  <td>Dùng để phân loại, sắp xếp các chi phí vào các mục tương ứng tham chiếu phụ lục Bảng 6.</td>
+		  <td>Procedure.category</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>GOI_VTYT</td>
+		  <td>Ghi mã gói vật tư y tế trong một lần sử dụng dịch vụ kỹ thuật (lần thứ nhất ghi G1, lần thứ hai ghi G2,...)</td>
+		  <td>Procedure.usedCode</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TEN_VAT_TU</td>
+		  <td>Tên vật tư y tế</td>
+		  <td>Substance.description</td>
+		  <td><a href="#">Substance Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TEN_DICH_VU</td>
+		  <td>Tên dịch vụ kỹ thuật hoặc tên giường thanh toán;</td>
+		  <td>Procedure.code</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DON_VI_TINH</td>
+		  <td>Đơn vị tính</td>
+		  <td>Claim.item.quantity</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>PHAM_VI</td>
+		  <td>Ghi mã phạm vi của vật tư y tế (1: Vật tư y tế trong phạm vi hưởng BHYT (trong danh mục BHYT); 2: Vật tư y tế ngoài phạm vi hưởng BHYT (ngoài danh mục BHYT))</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>SO_LUONG</td>
+		  <td>Số lượng thực tế sử dụng, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.quantity</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DON_GIA</td>
+		  <td>Ghi đơn giá của vật tư y tế, là giá theo hóa đơn mua vào của cơ sở KCB; làm tròn đến 3 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.unitPrice</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TT_THAU</td>
+		  <td>Ghi thông tin quyết định trúng thầu của vật tư y tế theo nguyên tắc: XXXX.YY.Z (XXXX: Năm ban hành QĐ, YY: số gói thầu, Z: số QĐ trúng thầu), (trường hợp không có quyết định trúng thầu thì ghi số công văn gửi cơ quan BHXH)</td>
+		  <td>Substance.instance.identifier</td>
+		  <td><a href="#">Substance Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TYLE_TT</td>
+		  <td>Tỷ lệ thanh toán của quỹ BHYT đối với dịch vụ kỹ thuật hoặc vật tư y tế có quy định tỷ lệ (%); Tỷ lệ này là số nguyên dương.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>THANH_TIEN</td>
+		  <td>= SO_LUONG * DON_GIA, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.net</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_TRANTT</td>
+		  <td>Ghi mức thanh toán tối đa của vật tư y tế theo quy định của Bộ Y tế. Trường hợp vật tư y tế không có quy định mức thanh toán đối đa thì để trống.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MUC_HUONG</td>
+		  <td>Ghi mức hưởng tương ứng với từng loại chi phí</td>
+		  <td>Claim.item.factor</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_NGUONKHAC</td>
+		  <td>Số tiền người bệnh được các nguồn tài chính khác hỗ trợ, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.factor</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BNTT</td>
+		  <td>Số tiền người bệnh tự trả ngoài phạm vi chi trả của Quỹ bảo hiểm y tế, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.factor</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BHTT</td>
+		  <td>Số tiền đề nghị cơ quan BHXH thanh toán theo phạm vi quyền lợi hưởng BHYT, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item.factor</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_BNCCT</td>
+		  <td>Số tiền người bệnh cùng chi trả trong phạm vi quyền lợi được hưởng bảo hiểm y tế, làm tròn số đến 2 chữ số thập phân. Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>T_NGOAlDS</td>
+		  <td>T_NGOAlDS = T_BHTT đối với các chi phí ngoài định suất, làm tròn số đến 2 chữ số thập phân, Sử dụng dấu Chấm (".") để phân cách giữa số Nguyên (hàng đơn vị) với số thập phân đầu tiên.</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_KHOA</td>
+		  <td>Mã khoa nơi phát sinh dịch vụ (tham chiếu phụ lục Bảng 7)</td>
+		  <td>ServiceRequest.locationCode</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_GIUONG</td>
+		  <td>Ghi mã giường tại từng khoa điều trị, mã giường gồm có 04 ký tự</td>
+		  <td>Encounter.location</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BAC_SI</td>
+		  <td>Mã bác sỹ khám và chỉ định (mã hóa theo số ghi trên Chứng chỉ hành nghề)/ mã người được cấp chứng chỉ hành nghề khám chữa bệnh ghi theo mã được cơ quan có thẩm quyền cấp CCHN</td>
+		  <td>ServiceRequest.requester</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_BENH</td>
+		  <td>Mã bệnh chính (theo ICD 10) hoặc mã bệnh y học cổ truyền được bác sỹ, y sỹ y học cổ truyền chẩn đoán trong trường hợp KCB YHCT. Nếu có các bệnh khác kèm theo thì ghi các mã bệnh tương ứng, cách nhau bằng dấu chấm phẩy (;)</td>
+		  <td>Condition.code</td>
+		  <td><a href="#">Encounter-Diagnosis-Condition Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_YL</td>
+		  <td>Ngày thực hiện y lệnh (gồm 12 ký tự, theo cấu trúc: yyyymmddHHmm = 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (24 giờ) + 2 ký tự phút).</td>
+		  <td>ServiceRequest.occurrenceDateTime</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_KQ</td>
+		  <td>Ngày có kết quả (gồm 12 ký tự, theo cấu trúc: yyyymmddHHmm = 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (24 giờ) + 2 ký tự phút).</td>
+		  <td>Procedure.performedDateTime</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_PTTT</td>
+		  <td>Mã phương thức thanh toán (0: Phí dịch vụ; 1: định suất; 2: ngoài định suất; 3: DRG)</td>
+		  <td>Claim.item</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+	  </tbody>
+	</table>
+	
+	<a name="table_4"> </a>
+	<h4>Bảng 4. Chỉ tiêu chỉ số kết quả cận lâm sàng</h4>
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th style="width:15%">Thông tin</th>
+		  <th style="width:40%">Diễn giải</th>
+		  <th style="width:20%">FHIR Resource</th>
+		  <th style="width:15%">Core Profile</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>MA_LK</td>
+		  <td>Mã đợt điều trị duy nhất (Dùng để liên kết giữa bảng tổng hợp (Bảng 1) và bảng này trong 1 lần khám bệnh, chữa bệnh).</td>
+		  <td>Encounter.id</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>STT</td>
+		  <td>Từ 1 đến hết trong một lần gửi dữ liệu</td>
+		  <td>Claim.id</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_DICH_VU</td>
+		  <td>Mã dịch vụ kỹ thuật cận lâm sàng quy định tại Bộ mã danh mục dùng chung do Bộ Y tế ban hành</td>
+		  <td>Procedure.code</td>
+		  <td><a href="#">Procedure Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_CHI_SO</td>
+		  <td>Mã chỉ số xét nghiệm theo quy định tại Bộ mã danh mục dùng chung do Bộ Y tế ban hành</td>
+		  <td>Observation.code</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>
+		<tr>
+		  <td>TEN_CHI_SO</td>
+		  <td>Tên chỉ số xét nghiệm theo quy định của Bộ Y tế</td>
+		  <td>Observation.code.text</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>
+		<tr>
+		  <td>GIA_TRI</td>
+		  <td>Giá trị chỉ số (kết quả xét nghiệm)</td>
+		  <td>Observation.value[x]</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MA_MAY</td>
+		  <td>Mã danh mục máy cận lâm sàng (máy xét nghiệm, máy XQuang, máy siêu âm...), tạm thời được ghi theo nguyên tắc: XX.n.YYYYY.ZZZZZZ</td>
+		  <td>Observation.device</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>
+		<tr>
+		  <td>MO_TA</td>
+		  <td>Mô tả do người đọc kết quả ghi (Đối với các xét nghiệm không có phần mô tả kết quả thì để trống)</td>
+		  <td>Observation.note</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>
+		<tr>
+		  <td>KET_LUAN</td>
+		  <td>Kết luận của người đọc kết quả (Đối với các xét nghiệm không có phần mô tả kết quả thì để trống)</td>
+		  <td>Observation.interpretation</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_KQ</td>
+		  <td>Ghi thời điểm có kết quả cận lâm sàng (gồm 12 ký tự, theo cấu trúc: yyyymmddHHmm = 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (24 giờ) + 2 ký tự phút)</td>
+		  <td>*Observation.effectiveDateTime</td>
+		  <td><a href="#">Observation Profile</a></td>
+		</tr>		
+	  </tbody>
+	</table>
+	
+	<a name="table_4"> </a>
+	<h4>Bảng 5. Chỉ tiêu theo dõi diễn biến lâm sàng</h4>
+	<table class="grid">
+	  <thead>
+		<tr>
+		  <th style="width:15%">Thông tin</th>
+		  <th style="width:40%">Diễn giải</th>
+		  <th style="width:20%">FHIR Resource</th>
+		  <th style="width:15%">Core Profile</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>MA_LK</td>
+		  <td>Mã đợt điều trị duy nhất (Dùng để liên kết giữa bảng tổng hợp (Bảng 1) và bảng này trong 1 lần khám bệnh, chữa bệnh).</td>
+		  <td>Encounter.id</td>
+		  <td><a href="#">Encounter Profile</a></td>
+		</tr>
+		<tr>
+		  <td>STT</td>
+		  <td>Từ 1 đến hết trong một lần gửi dữ liệu</td>
+		  <td>Claim.id</td>
+		  <td><a href="#">Claim Profile</a></td>
+		</tr>
+		<tr>
+		  <td>DIEN_BIEN</td>
+		  <td>Ghi diễn biến bệnh trong lần khám</td>
+		  <td>*</td>
+		  <td><a href="#">* Profile</a></td>
+		</tr>
+		<tr>
+		  <td>HOI_CHAN</td>
+		  <td>	Ghi kết quả hội chẩn (nếu có)</td>
+		  <td>*</td>
+		  <td><a href="#">* Profile</a></td>
+		</tr>
+		<tr>
+		  <td>PHAU_THUAT</td>
+		  <td>Mô tả cách thức phẫu thuật</td>
+		  <td>*</td>
+		  <td><a href="#">* Profile</a></td>
+		</tr>
+		<tr>
+		  <td>NGAY_YL</td>
+		  <td>Ngày ra y lệnh (gồm 13 ký tự, theo cấu trúc: yyyymmddHHmm = 4 ký tự năm + 2 ký tự tháng + 2 ký tự ngày + 2 ký tự giờ (24 giờ) + 2 ký tự phút)</td>
+		  <td>*</td>
+		  <td><a href="#">* Profile</a></td>
+		</tr>		
+	  </tbody>
+	</table>
+</div>

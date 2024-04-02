@@ -1,0 +1,109 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  
+	<div class="warning">
+        <b>LƯU Ý:</b> 
+        <ul> 
+			<li>Bản hướng dẫn thực thi này đang trong quá trình lấy ý kiến tham khảo</li>
+			<li>Các thông tin được đề cập trong bản hướng dẫn thực thi này hiện tại chỉ đóng vai trò tham chiếu.</li>
+			<li>Các thông tin có thể được cập nhật, điều chỉnh trong những phiên bản tới dựa trên ý kiến đóng góp của các đội ngũ chuyên gia, hội đồng chuyên môn liên quan.</li>
+        </ul> 
+    </div>
+	<br/>
+	
+	<a name="intro"> </a>
+	<h3>Giới thiệu</h3>
+	<p>
+    Bản hướng dẫn thực thi (Implementation Guide) được cung cấp với mục đích hỗ trợ việc áp dụng và triển khai dựa trên bộ tiêu chuẩn HL7 FHIR®© đối với các hệ thống thông tin tin Y tế tại Việt Nam.
+	
+	Đây là một bản đặc tả được xây dựng được dựa trên sự đóng góp ý kiến của các cơ quan quản lý, đơn vị thụ hưởng, nhà cung cấp giải pháp/sản phẩm CNTT và các chuyên gia liên quan.
+	</p>
+	<a name="technical"> </a>
+	<h3>Technical Overview</h3>
+	<p>
+	Bản đặc tả này mô tả những khía cạnh cụ thể tương ứng với đặc thù của các hệ thống thông tin tại Việt Nam thông qua việc ứng dụng bộ tiêu chuẩn HL7 FHIR®©. Trong phiên bản hiện tại, những đặc tả được đề cập tại đây được dựa trên phiên bản HL7 FHIR®© version 4.0.1.
+	<ul>
+		<li><strong>Profiles</strong> -  các Profile được áp dụng tại Việt Nam
+		</li>
+		<li><strong>Extensions</strong> - các Extension được áp dụng tại Việt Nam.
+		</li>
+		<li><strong>Terminologies</strong> - các danh mục dùng chung được áp dụng tại Việt Nam.
+		</li>
+		<li><strong>NamingSystems</strong> - cung cấp định nghĩa về các "System" được sử dụng trong việc khai báo các cấu trúc thông tin như Profile/Extension, mã định danh (Số CMTND, thẻ căn cước công dân, ...)
+		</li>
+	</ul>	
+	</p>
+	<a name="usage"> </a>
+	<h3>Mục đích sử dụng</h3>
+	<p>
+	Bộ hướng dẫn thực thi này có thể được trực tiếp sử dụng/tham khảo bởi các nhà cung cấp giải pháp/sản phẩm CNTT tuân thủ bộ tiêu chuẩn HL7 FHIR®©.
+	
+	Các thông tin bao gồm trong bộ hướng dẫn thực thi này hướng tới việc cung cấp những chỉ dẫn để áp dụng những yêu cầu/nguyên tắc đặc thù tại Việt Nam thông qua bộ tiêu chuẩn trên; bao gồm các CodeSystem, ValueSet, Profile, Extension, ... Nội dung của bộ hướng dẫn thực thi này bao gồm chủ yếu các Profile cơ bản sẽ được sử dụng trong những trường hợp cụ thể trong tương lai.
+	</p>
+	
+	<a name="intertionalpatientsummary"> </a>
+	<h3>International Patient Summary (IPS) Implementation guide</h3>	
+	
+	<p>
+		Tham khảo: <a href="https://build.fhir.org/ig/HL7/fhir-ips/" target="_blank"><strong>International Patient Summary (IPS) Implementation guide</strong></a>
+	</p>
+	
+	<a name="ipsintro"> </a>
+	<h4>Bản tài liệu International Patient Summary (IPS) </h4>
+	<p>
+		<ul>
+			<li>
+			  <strong>là một bản trích xuất hồ sơ sức khỏe điện tử</strong> chứa thông tin chăm sóc sức khỏe cần thiết về một đối tượng chăm sóc. Như được quy định trong điều luật EN 17269 và ISO/DIS 27269, nó được thiết kế để hỗ trợ tình huống sử dụng cho 'chăm sóc xuyên biên giới, không giới hạn', nhưng nó không giới hạn ở nó. Nó có mục đích mang tính quốc tế, tức là cung cấp các giải pháp chung cho ứng dụng toàn cầu ngoài một khu vực hoặc quốc gia cụ thể.
+			</li>
+			<li>
+			  Các profile được đặc tả trong IPS là <strong>minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant.</strong>
+			</li>
+			<li>
+			  được tạo bởi một tập hợp các mục dữ liệu cốt lõi mạnh mẽ, được xác định rõ và có khả năng tái sử dụng.
+			</li>
+		</ul>
+	</p>
+		
+	<p><img src="IPS_doc_library.png" class="figure-img img-responsive img-rounded center-block" alt="Figure 1: The IPS product and by-products" style="width:70%"></img></p>
+	<div style="clear:both;"></div>
+	
+	<a name="compatiable"></a>
+	<h4>Khả năng tương thích của VN CORE Data for Interoperability (VCDI) với IPS</h4>
+	
+	<p>
+		Các profile và dataset được sử dụng trong VCDI được xây dựng dựa trên IPS và hoàn toàn tương thích với các profile và dataset thuộc IPS. Đảm bảo khả năng trao đổi thông tin giữa các hệ thống dựa trên VCDI và các hệ thống sử dụng IPS/hoặc mở rộng dựa trên IPS trong tương lai.
+	</p>
+	
+	<a name="walkthrough"> </a>
+	<h3>Nội dung</h3>
+	<p>
+    Những phần chính bao gồm:
+	</p>
+	<ul>
+		<li>
+		  <strong>Những thông tin tham chiếu</strong> - cung cấp những thông tin về <a href="#">văn bản quy phạm pháp luật liên quan</a>, cũng như <a href="background.html">những thông tin cơ bản</a> về bộ tiêu chuẩn HL7 FHIR®© mà người đọc cần có để có thể tiếp cận được những nội dung trong tài liệu này.
+		</li>
+		<li>
+		  <strong>Đặc tả</strong> - bao gồm những nội dung mà tài liệu này cần cung cấp; bao gồm <a href="profile.html">Profile</a>, <a href="#">Extension</a> được sử dụng tại Việt Nam, và một số thông tin khác liên quan.
+		</li>		
+		<li>
+		  <strong>Danh mục dùng chung</strong> - bao gồm những <a href="#">CodeSystem</a>, <a href="#">ValueSet</a>, <a href="#">ConcepMap</a> và <a href="#">NamingSystem</a> được áp dụng tại Việt Nam.
+		</li>
+		<li>
+		  <a href="artifacts.html">Artifact Index</a> - trang tổng hợp các nội dung được bộ định chuẩn cung cấp.
+		</li>
+		<li>
+		  <a href="security.html">An toàn, bảo mật thông tin</a> - cung cấp những khuyến nghị về an toàn, bảo mật thông tin đối với các hệ thống thông tin Y tế có áp dụng bộ tiêu chuẩn HL7 FHIR®©.
+		</li>
+		<li>
+		  <strong>Hỗ trợ</strong> - cung cấp những thông tin, công cụ hỗ trợ dành cho người đọc.
+		</li>
+	</ul>
+	<a name="contact"> </a>
+	<h3>Thông tin liên hệ</h3>
+	<p>
+    Thông tin liên hệ, giải đáp thắc mắc:
+	<br/>
+	// TODO
+	</p>
+</div>

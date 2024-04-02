@@ -1,0 +1,300 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-race"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-race"/>
+   <version value="1.0"/>
+   <name value="Danh mục Dân tộc - theo ban hành của Tổng cục thống kê"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Tổng cục thống kê"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Dân tộc - theo ban hành của Tổng cục thống kê. Tham vấn: https://www.gso.gov.vn/default.aspx?tabid=727"/>
+   <copyright value="Tổng cục thống kê"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="01"/>
+      <display value="Kinh"/>
+	  <definition value="Việt"/>
+   </concept>
+   <concept>
+      <code value="02"/>
+      <display value="Tày"/>
+	  <definition value="Thổ, Ngạn, Phén, Thù Lao, Pa Dí, Tày Khao"/>
+   </concept>
+   <concept>
+      <code value="03"/>
+      <display value="Thái"/>
+	  <definition value="Tày Đăm, Tày Mười, Tày Thanh, Mán Thanh, Hàng Bông, Tày Mường, Pa Thay, Thổ Đà Bắc"/>
+   </concept>
+   <concept>
+      <code value="04"/>
+      <display value="Hoa"/>
+	  <definition value="Hán, Triều Châu, Phúc Kiến, Quảng Đông, Hải Nam, Hạ, Xạ Phạng"/>
+   </concept>
+   <concept>
+      <code value="05"/>
+      <display value="Khơ-me"/>
+	  <definition value="Cur, Cul, Cu, Thổ, Việt gốc Miên, Krôm"/>
+   </concept>
+   <concept>
+      <code value="06"/>
+      <display value="Mường"/>
+	  <definition value="Mol, Mual, Mọi, Mọi Bi, Ao Tá, Ậu Tá"/>
+   </concept>
+   <concept>
+      <code value="07"/>
+      <display value="Nùng"/>
+	  <definition value="Xuồng, Giang, Nùng An, Phàn Sinh, Nùng Cháo, Nùng Lòi, Quý Rim, Khèn Lài"/>
+   </concept>
+   <concept>
+      <code value="08"/>
+      <display value="HMông"/>
+	  <definition value="Mèo, Hoa, Mèo Xanh, Mèo Đỏ, Mèo Đen, Ná Mẻo, Mán Trắng"/>
+   </concept>
+   <concept>
+      <code value="09"/>
+      <display value="Dao"/>
+	  <definition value="Mán, Động, Trại, Xá, Dìu, Miên, Kiềm, Miền, Quần Trắng, Dao Đỏ, Quần Chẹt, Lô Giang, Dao Tiền, Thanh Y, Lan Tẻn, Đại Bản, Tiểu Bản, Cóc Ngáng, Cóc Mùn, Sơn Đầu"/>
+   </concept>
+   <concept>
+      <code value="10"/>
+      <display value="Gia-rai"/>
+	  <definition value="Giơ-rai, Tơ-buăn, Chơ-rai, Hơ-bau, Hđrung, Chor"/>
+   </concept>
+   <concept>
+      <code value="11"/>
+      <display value="Ngái"/>
+	  <definition value="Xín, Lê, Đản, Khách Gia"/>
+   </concept>
+   <concept>
+      <code value="12"/>
+      <display value="Ê-đê"/>
+	  <definition value="Ra-đê, Đê, Kpạ, A-đham, Krung, Ktul, Đliê Ruê, Blô, Epan, Mđhur, Bih"/>
+   </concept>
+   <concept>
+      <code value="13"/>
+      <display value="Ba na"/>
+	  <definition value="Giơ-lar. Tơ-lô, Giơ-lâng, Y-lăng, Rơ-ngao, Krem, Roh, ConKđe, A-la Công, Kpăng Công, Bơ-nâm"/>
+   </concept>
+   <concept>
+      <code value="14"/>
+      <display value="Xơ-Đăng"/>
+	  <definition value="Xơ-teng, Hđang, Tơ-đra, Mơ-nâm, Ha-lăng, Ca-dong, Kmrâng, ConLan, Bri-la, Tang"/>
+   </concept>
+   <concept>
+      <code value="15"/>
+      <display value="Sán Chay"/>
+	  <definition value="Cao Lan, Sán Chỉ, Mán Cao Lan, Hờn Bạn, Sơn Tử"/>
+   </concept>
+   <concept>
+      <code value="16"/>
+      <display value="Cơ-ho"/>
+	  <definition value="Xrê, Nốp, Tu-lốp, Cơ-don, Chil, Lat, Lach, Trinh"/>
+   </concept>
+   <concept>
+      <code value="17"/>
+      <display value="Chăm"/>
+	  <definition value="Chàm, Chiêm Thành, Hroi"/>
+   </concept>
+   <concept>
+      <code value="18"/>
+      <display value="Sán Dìu"/>
+	  <definition value="Sán Dẻo, Trại, Trại Đất, Mán, Quần Cộc"/>
+   </concept>
+   <concept>
+      <code value="19"/>
+      <display value="Hrê"/>
+	  <definition value="Chăm Rê, Chom, Krẹ Luỹ"/>
+   </concept>
+   <concept>
+      <code value="20"/>
+      <display value="Mnông"/>
+	  <definition value="Pnông, Nông, Pré, Bu-đâng, ĐiPri, Biat, Gar, Rơ-lam, Chil"/>
+   </concept>
+   <concept>
+      <code value="21"/>
+      <display value="Ra-glai"/>
+	  <definition value="Ra-clây, Rai, Noang, La-oang"/>
+   </concept>
+   <concept>
+      <code value="22"/>
+      <display value="Xtiêng"/>
+	  <definition value="Xa-điêng"/>
+   </concept>
+   <concept>
+      <code value="23"/>
+      <display value="Bru-Vân Kiều"/>
+	  <definition value="Bru, Vân Kiều, Măng Coong, Tri Khùa"/>
+   </concept>
+   <concept>
+      <code value="24"/>
+      <display value="Thổ"/>
+	  <definition value="Kẹo, Mọn, Cuối, Họ, Đan Lai, Ly Hà, Tày Pọng, Con Kha, Xá Lá Vàng"/>
+   </concept>
+   <concept>
+      <code value="25"/>
+      <display value="Giáy"/>
+	  <definition value="Nhắng, Dẩng, Pầu Thìn Nu Nà, Cùi Chu, Xa"/>
+   </concept>
+   <concept>
+      <code value="26"/>
+      <display value="Cơ-tu"/>
+	  <definition value="Ca-tu, Cao, Hạ, Phương, Ca-tang"/>
+   </concept>
+   <concept>
+      <code value="27"/>
+      <display value="Gié Triêng"/>
+	  <definition value="Đgiéh, Tareb, Giang Rẫy Pin, Triêng, Treng, Ta-riêng, Ve, Veh, La-ve, Ca-tang"/>
+   </concept>
+   <concept>
+      <code value="28"/>
+      <display value="Mạ"/>
+	  <definition value="Châu Mạ, Mạ Ngăn, Mạ Xóp, Mạ Tô, Mạ Krung"/>
+   </concept>
+   <concept>
+      <code value="29"/>
+      <display value="Khơ-mú"/>
+	  <definition value="Xá Cẩu, Mứn Xen, Pu Thênh, Tềnh, Tày Hay"/>
+   </concept>
+   <concept>
+      <code value="30"/>
+      <display value="Co"/>
+	  <definition value="Cor, Col, Cùa, Trầu"/>
+   </concept>
+   <concept>
+      <code value="31"/>
+      <display value="Tà-ôi"/>
+	  <definition value="Tôi-ôi, Pa-co, Pa-hi, Ba-hi"/>
+   </concept>
+   <concept>
+      <code value="32"/>
+      <display value="Chơ-ro"/>
+	  <definition value="Dơ-ro, Châu-ro"/>
+   </concept>
+   <concept>
+      <code value="33"/>
+      <display value="Kháng"/>
+	  <definition value="Xá Khao, Xá Súa, Xá Dón, Xá Dẩng, Xá Hốc, Xá Ái, Xá Bung, Quảng Lâm"/>
+   </concept>
+   <concept>
+      <code value="34"/>
+      <display value="Xinh-mun"/>
+	  <definition value="Puộc, Pụa"/>
+   </concept>
+   <concept>
+      <code value="35"/>
+      <display value="Hà Nhì"/>
+	  <definition value="U Ni, Xá U Ni"/>
+   </concept>
+   <concept>
+      <code value="36"/>
+      <display value="Chu ru"/>
+	  <definition value="Chơ-ru, Chu"/>
+   </concept>
+   <concept>
+      <code value="37"/>
+      <display value="Lào"/>
+	  <definition value="Là Bốc, Lào Nọi"/>
+   </concept>
+   <concept>
+      <code value="38"/>
+      <display value="La Chí"/>
+	  <definition value="Cù Tê, La Quả"/>
+   </concept>
+   <concept>
+      <code value="39"/>
+      <display value="La Ha"/>
+	  <definition value="Xá Khao, Khlá Phlạo"/>
+   </concept>
+   <concept>
+      <code value="40"/>
+      <display value="Phù Lá"/>
+	  <definition value="Bồ Khô Pạ, Mu Di Pạ Xá, Phó, Phổ, Va Xơ"/>
+   </concept>
+   <concept>
+      <code value="41"/>
+      <display value="La Hủ"/>
+	  <definition value="Lao, Pu Đang, Khù Xung, Cò Xung, Khả Quy"/>
+   </concept>
+   <concept>
+      <code value="42"/>
+      <display value="Lự"/>
+	  <definition value="Lừ, Nhuồn, Duôn"/>
+   </concept>
+   <concept>
+      <code value="43"/>
+      <display value="Lô Lô"/>
+	  <definition value="Mun Di"/>
+   </concept>
+   <concept>
+      <code value="44"/>
+      <display value="Chứt"/>
+	  <definition value="Sách, Máy, Rục, Mã-liêng, A-rem, Tu vang, Pa-leng, Xơ-Lang, Tơ-hung, Chà-củi, Tắc-củi, U-mo, Xá Lá Vàng"/>
+   </concept>
+   <concept>
+      <code value="45"/>
+      <display value="Mảng"/>
+	  <definition value="Mảng Ư, Xá Lá Vàng"/>
+   </concept>
+   <concept>
+      <code value="46"/>
+      <display value="Pà Thẻn"/>
+	  <definition value="Pà Hưng, Tống"/>
+   </concept>
+   <concept>
+      <code value="47"/>
+      <display value="Co Lao"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="48"/>
+      <display value="Cống"/>
+	  <definition value="Xắm Khống, Mấng Nhé, Xá Xeng"/>
+   </concept>
+   <concept>
+      <code value="49"/>
+      <display value="Bố Y"/>
+	  <definition value="Chủng Chá, Trọng Gia, Tu Di, Tu Din"/>
+   </concept>
+   <concept>
+      <code value="50"/>
+      <display value="Si La"/>
+	  <definition value="Cù Dề Xừ, Khả pẻ"/>
+   </concept>
+   <concept>
+      <code value="51"/>
+      <display value="Pu Péo"/>
+	  <definition value="Ka Pèo, Pen Ti Lô Lô"/>
+   </concept>
+   <concept>
+      <code value="52"/>
+      <display value="Brâu"/>
+	  <definition value="Brao"/>
+   </concept>
+   <concept>
+      <code value="53"/>
+      <display value="Ơ Đu"/>
+	  <definition value="Tày Hạt"/>
+   </concept>
+   <concept>
+      <code value="54"/>
+      <display value="Rơ măm"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="55"/>
+      <display value="Người nước ngoài"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="99"/>
+      <display value="Không rõ"/>
+	  <definition value=""/>
+   </concept>
+</CodeSystem>

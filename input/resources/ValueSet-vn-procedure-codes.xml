@@ -1,0 +1,48 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vn-procedure-code"/>
+  <url value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-procedure-code"/>
+  <version value="1.0"/>
+  <name value="ValueSet-VN_Core_Procedure_Code"/>
+  <title value="ValueSet dành cho Mã dịch vụ kỹ thuật"/>
+  <status value="draft"/>
+  <date value="2020-12-31"/>
+  <publisher value="Bộ Y tế"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://moh.gov.vn"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet dành cho Mã dịch vụ kỹ thuật"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="VN"/>
+      <display value="Viet Nam"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from:
+  1. Procedure codes - managed and publiced by Vietnam MOH.
+  2. CPT-4  - American Medical Association's Current Procedure Terminology 4 (CPT-4) codes.
+  3. CPT-5.
+  4.  SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+  <compose>
+    <include>
+      <system value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-procedureCode"/>
+    </include>
+	<include>
+      <system value="http://www.ama-assn.org/go/cpt"/>
+    </include>	
+	<include>
+      <system value="http://terminology.hl7.org/CodeSystem/C5"/>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="71388002"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

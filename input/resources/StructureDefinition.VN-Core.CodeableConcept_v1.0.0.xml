@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-codeableconcept" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:11:38.802+00:00" />
+  </meta>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+  <version value="1.0.0" />
+  <name value="VNCoreCodeableConcept" />
+  <title value="Codeable Concept profile - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:11:36.0423962+00:00" />
+  <description value="VN Core Codeable Concept profile" />
+  <purpose value="VN Core Codeable Concept" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="orim" />
+    <uri value="http://hl7.org/orim" />
+    <name value="Ontological RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="CodeableConcept" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CodeableConcept.coding">
+      <path value="CodeableConcept.coding" />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-coding" />
+      </type>
+    </element>
+    <element id="CodeableConcept.text">
+      <path value="CodeableConcept.text" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

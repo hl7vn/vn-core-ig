@@ -1,0 +1,87 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vn-medication-code"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+			<h2>Medication Clinical Drug (RxNorm)</h2>
+			<p>All prescribable medication formulations represented using  either a 'generic' or 'brand-specific' concept. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack), SCDG (semantic clinical drug group), SBDG (semantic brand drug group), SCDF (semantic clinical drug form), or SBDF (semantic brand drug form)</p>
+			<p>This value set includes codes from the following code systems:</p>
+			<ul>
+				<li>Include codes from http://www.nlm.nih.gov/research/umls/rxnorm where TTY  in  SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF</li>
+			</ul>
+			<p>Or from SNOMED CT:</p>
+			<p>Possible sources include:</p>
+			  <ul>
+
+					
+				<li>Include codes from http://snomed.info/sct where concept  is-a  410942007</li>
+						
+					
+				<li>Include codes from http://snomed.info/sct where concept  is-a  373873005</li>
+					
+					
+				<li>Include codes from http://snomed.info/sct where concept  is-a  106181007</li>
+					
+				
+			  </ul>
+		</div>
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-medication-code"/>
+  <version value="1.0"/>
+  <name value="ValueSet-VN_Core_Medication_Code"/>
+  <title value="ValueSet dành cho Mã dược phẩm"/>
+  <status value="draft"/>
+  <date value="2020-12-31"/>
+  <publisher value="Bộ Y tế"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://moh.gov.vn"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet dành cho Mã dược phẩm"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="VN"/>
+      <display value="Viet Nam"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Using RxNorm codes of type SAB=RXNORM as this specification describes [does not require](https://www.nlm.nih.gov/research/umls/rxnorm/docs/prescribe.html)  a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7&#39;s status as a licensee of the NLM UMLS. HL7&#39;s license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right. And for content from SNOMED Clinical Terms&#xAE; (SNOMED CT&#xAE;) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org."/>
+  <compose>
+    <include>
+      <system value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-medicationCode"/>
+    </include>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <filter>
+        <property value="TTY"/>
+        <op value="in"/>
+        <value value="SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"/>
+      </filter>
+    </include>
+	<include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="410942007"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="373873005"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="106181007"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

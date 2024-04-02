@@ -1,0 +1,63 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="LL2201-3"/>
+   <meta>
+      <versionId value="2"/>
+      <lastUpdated value="2020-06-30T02:58:28.943+00:00"/>
+   </meta>
+   <url value="http://loinc.org/vs/LL2201-3"/>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:1.3.6.1.4.1.12009.10.1.1356"/>
+   </identifier>
+   <version value="Loinc_2.68"/>
+   <title value="LOINC® LL2201-3 - ValueSet về tình trạng hút thuốc"/>
+   <description value="LOINC® LL2201-3 - ValueSet về tình trạng hút thuốc"/>
+   <name value="Smoking Status - HL7 Value Set"/>
+   <status value="active"/>
+   <publisher value="Regenstrief Institute, Inc."/>
+   <contact>
+      <name value="Regenstrief Institute, Inc."/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://loinc.org"/>
+      </telecom>
+   </contact>
+   <copyright value="This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at https://loinc.org/license/"/>
+   <compose>
+      <include>
+         <system value="http://loinc.org"/>
+         <concept>
+            <code value="LA18976-3"/>
+            <display value="Current every day smoker"/>
+         </concept>
+         <concept>
+            <code value="LA18977-1"/>
+            <display value="Current some day smoker"/>
+         </concept>
+         <concept>
+            <code value="LA15920-4"/>
+            <display value="Former smoker"/>
+         </concept>
+         <concept>
+            <code value="LA18978-9"/>
+            <display value="Never smoker"/>
+         </concept>
+         <concept>
+            <code value="LA18979-7"/>
+            <display value="Smoker, current status unknown"/>
+         </concept>
+         <concept>
+            <code value="LA18980-5"/>
+            <display value="Unknown if ever smoked"/>
+         </concept>
+         <concept>
+            <code value="LA18981-3"/>
+            <display value="Heavy tobacco smoker"/>
+         </concept>
+         <concept>
+            <code value="LA18982-1"/>
+            <display value="Light tobacco smoker"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

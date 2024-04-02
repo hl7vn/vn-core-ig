@@ -1,0 +1,34 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  
+	<a name="intro"> </a>
+	<h3>Giới thiệu chung</h3>
+	<p>TODO: add note</p>
+
+	
+	<a name="infor-model"> </a>
+	<h3>Mô hình thông tin</h3>
+	<p>Tham khảo <a href="https://loinc.org/10156-8/" target="_blank">FHIR Document </a> <br/>
+	
+	Ghi chú lâm sàng là một thành phần quan trọng để truyền đạt tình trạng hiện tại của bệnh nhân. Trong ngữ cảnh của hướng dẫn thực hiện này, thuật ngữ ghi chú lâm sàng đề cập đến nhiều loại tài liệu được tạo ra thay mặt cho bệnh nhân trong nhiều hoạt động chăm sóc. Chúng bao gồm các ghi chú để hỗ trợ chuyển tiếp chăm sóc, lập kế hoạch chăm sóc, báo cáo chất lượng, thanh toán và thậm chí ghi chú viết tay của các cơ sở khám, chữa bệnh. Hướng dẫn triển khai này không xác định loại ghi chú mới hoặc đặt yêu cầu nội dung cho mỗi loại ghi chú. Thay vào đó, hướng dẫn thực hiện này tập trung vào việc hiển thị các ghi chú lâm sàng tương ứng với các VBQPPL đã được ban hành.
+	</p>
+	
+	<div>
+		<figure class="figure">
+		<figcaption class="figure-caption"><strong>Hình 1: FHIR Document</strong></figcaption>
+		  <img src="Document_Bundle.jpg" class="figure-img-portrait img-responsive img-rounded center-block" style="width:700px;"/>
+		</figure>
+		<p></p>
+	</div>
+	
+	<p>Các FHIR Document đều có một cấu trúc thông tin chung: bao tất cả là FHIR Bundle (với kiểu loại là 'document'); và trong đó bao gồm FHIR Composition là entry đầu tiên của Bunble này, theo sau đó là các tài nguyên khác (đóng vai trò như các dữ liệu/thông tin bổ sung trong các tài liệu lâm sàng) và được tham chiếu từ Composition. Tất cả dữ liệu đều được hiển thị trong một file XML hoặc JSON duy nhất; các thông tin kèm theo có thể có các thông tin diễn giải (humanreadable narrative content), và các thông tin hỗ trợ khác như chữ ký số, ...
+	</p>
+	
+	<div>
+		<figure class="figure">
+		<figcaption class="figure-caption"><strong>Hình 2: Thông tin tham chiếu giữa FHIR Composition và các Resource khác</strong></figcaption>
+		  <img src="Document_Bundle_2.jpg" class="figure-img-portrait img-responsive img-rounded center-block" style="width:800px;"/>
+		</figure>
+		<p></p>
+	</div>
+</div>

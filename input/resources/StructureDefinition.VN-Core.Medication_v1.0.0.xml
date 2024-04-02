@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-medication" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication" />
+  <version value="1.0.0" />
+  <name value="VNCoreMedication" />
+  <title value="Medication Profile - VN Core R4" />
+  <status value="draft" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Thông tin về Dược phẩm dùng trong cơ sở khám, chữa bệnh" />
+  <copyright value="Bộ Y tế" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="script10.6" />
+    <uri value="http://ncpdp.org/SCRIPT10_6" />
+    <name value="Mapping to NCPDP SCRIPT 10.6" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Medication" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Medication.identifier">
+      <path value="Medication.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.code">
+      <path value="Medication.code" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Medication.code:medicationCode">
+      <path value="Medication.code" />
+      <sliceName value="medicationCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-medication-code" />
+      </binding>
+    </element>
+    <element id="Medication.status">
+      <path value="Medication.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.manufacturer">
+      <path value="Medication.manufacturer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.manufacturer.display">
+      <path value="Medication.manufacturer.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form">
+      <path value="Medication.form" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Medication.amount">
+      <path value="Medication.amount" />
+      <type>
+        <code value="Ratio" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips" />
+      </type>
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept">
+      <path value="Medication.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="Medication.ingredient.isActive">
+      <path value="Medication.ingredient.isActive" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.batch">
+      <path value="Medication.batch" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.batch.lotNumber">
+      <path value="Medication.batch.lotNumber" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.batch.expirationDate">
+      <path value="Medication.batch.expirationDate" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

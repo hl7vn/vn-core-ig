@@ -1,0 +1,40 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+  <id value="driver-license-number"/>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <name value="SID-Driver-License-Number"/>
+  <status value="draft"/>
+  <kind value="identifier"/>
+  <date value="2020-05-01"/>
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="https://ehealth.gov.vn/"/>
+    </telecom>
+  </contact>
+  <responsible value="Bộ Y tế Việt Nam"/>
+  <description value="NamingSystem dành cho bằng lái xe."/>
+  <type>
+	<coding>
+		<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		<code value="DL"/>
+		<display value="Driver's license number"/>
+	</coding>
+	<text value="Driver's license number"/>
+  </type>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="826"/>
+    </coding>
+  </jurisdiction>
+  <usage value="NamingSystem dành cho bằng lái xe."/>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="http://fhir.ehealth.gov.vn/core/sid/driver-license-number"/>
+    <preferred value="true"/>
+  </uniqueId>
+</NamingSystem>

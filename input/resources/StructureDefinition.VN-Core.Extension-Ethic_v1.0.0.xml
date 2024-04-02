@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-ethic" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:13:35.343+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-ethic" />
+  <version value="1.0" />
+  <name value="ExtensionEthic" />
+  <title value="Extension - Patient Ethic - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:13:33.2287261+00:00" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Extension dành cho thông tin về Tôn giáo của người bệnh" />
+  <purpose value="Extension dành cho thông tin về Tôn giáo của người bệnh" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Extension về thông tin Tôn giáo của người bệnh" />
+      <definition value="Extension về thông tin Tôn giáo của người bệnh" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-ethic" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin tôn giáo" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-ethic" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,242 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="patient-history-social-factor-type"/>
+   <url value="http://fhir.ehealth.gov.vn/core/ValueSet/patient-history-social-factor-type"/>
+   <version value="1.0"/>
+   <name value="ValueSet-PatientHistory_SoicalFactor_Type"/>
+   <title value="ValueSet dành cho loại tiền sử bệnh lý và đặc điểm xã hội"/>
+   <description value="ValueSet dành cho loại tiền sử bệnh lý và đặc điểm xã hội, sử dụng LOINC Code"/>
+   <status value="active"/>
+   <publisher value="Bộ Y tế"/>
+   <contact>
+      <name value="Bộ Y tế"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <compose>
+      <include>
+         <system value="http://loinc.org"/>
+         <concept>
+            <code value="10164-2"/>
+            <display value="History of Present illness"/>
+         </concept>
+         <concept>
+            <code value="11348-0"/>
+            <display value="History of Past illness"/>
+         </concept>
+         <concept>
+            <code value="11338-1"/>
+            <display value="History of Major illnesses and injuries"/>
+         </concept>
+         <concept>
+            <code value="10162-6"/>
+            <display value="History of pregnancies"/>
+         </concept>
+         <concept>
+            <code value="44939-7"/>
+            <display value="History of Adverse drug reaction"/>
+         </concept>
+         <concept>
+            <code value="10167-5"/>
+            <display value="History of Surgical procedures"/>
+         </concept>
+         <concept>
+            <code value="11336-5"/>
+            <display value="History of Hospitalization"/>
+         </concept>
+         <concept>
+            <code value="10156-8"/>
+            <display value="History of Childhood diseases"/>
+         </concept>
+         <concept>
+            <code value="11346-4"/>
+            <display value="History of Outpatient visits"/>
+         </concept>
+         <concept>
+            <code value="46264-8"/>
+            <display value="History of medical device use"/>
+         </concept>
+         <concept>
+            <code value="10155-0"/>
+            <display value="History of allergies, reported"/>
+         </concept>
+         <concept>
+            <code value="11369-6"/>
+            <display value="History of Immunization"/>
+         </concept>
+         <concept>
+            <code value="11332-4"/>
+            <display value="History of Cognitive function"/>
+         </concept>
+         <concept>
+            <code value="29762-2"/>
+            <display value="Social history"/>
+         </concept>
+         <concept>
+            <code value="11380-3"/>
+            <display value="Marital status and living arrangements"/>
+         </concept>
+         <concept>
+            <code value="11320-9"/>
+            <display value="Feeding and dietary status"/>
+         </concept>
+         <concept>
+            <code value="11294-6"/>
+            <display value="Current employment"/>
+         </concept>
+         <concept>
+            <code value="11340-7"/>
+            <display value="History of Occupation"/>
+         </concept>
+         <concept>
+            <code value="10161-8"/>
+            <display value="History of Occupational exposure"/>
+         </concept>
+         <concept>
+            <code value="55280-2"/>
+            <display value="Military service"/>
+         </concept>
+         <concept>
+            <code value="11330-8"/>
+            <display value="History of Alcohol use"/>
+         </concept>
+         <concept>
+            <code value="11366-2"/>
+            <display value="History of Tobacco use"/>
+         </concept>
+         <concept>
+            <code value="11342-3"/>
+            <display value="History of Other nonmedical drug use"/>
+         </concept>
+         <concept>
+            <code value="11350-6"/>
+            <display value="History of Sexual behavior"/>
+         </concept>
+         <concept>
+            <code value="10182-4"/>
+            <display value="History of Travel"/>
+         </concept>
+         <concept>
+            <code value="11344-9"/>
+            <display value="History of Other social factors"/>
+         </concept>
+         <concept>
+            <code value="10157-6"/>
+            <display value="History of family member diseases"/>
+         </concept>
+         <concept>
+            <code value="8672-8"/>
+            <display value="History of Nervous system disorders"/>
+         </concept>
+         <concept>
+            <code value="11358-9"/>
+            <display value="History of Psychiatric disorders"/>
+         </concept>
+         <concept>
+            <code value="10170-9"/>
+            <display value="History of Endocrine system disorders"/>
+         </concept>
+         <concept>
+            <code value="10172-5"/>
+            <display value="History of Hematologic system disorders"/>
+         </concept>
+         <concept>
+            <code value="11352-2"/>
+            <display value="History of Allergenic and Immunologic disorders"/>
+         </concept>
+         <concept>
+            <code value="56836-0"/>
+            <display value="History of Blood transfusion"/>
+         </concept>
+         <concept>
+            <code value="56837-8"/>
+            <display value="History of Neoplastic disease"/>
+         </concept>
+         <concept>
+            <code value="56838-6"/>
+            <display value="History of Infectious disease"/>
+         </concept>
+         <concept>
+            <code value="11357-1"/>
+            <display value="History of Integumentary system disorders"/>
+         </concept>
+         <concept>
+            <code value="10178-2"/>
+            <display value="History of Skin disorders"/>
+         </concept>
+         <concept>
+            <code value="11353-0"/>
+            <display value="History of Breasts disorders"/>
+         </concept>
+         <concept>
+            <code value="10171-7"/>
+            <display value="History of Eyes disorders"/>
+         </concept>
+         <concept>
+            <code value="11354-8"/>
+            <display value="History of Ears and Nose and Sinuses and Mouth and Throat disorders"/>
+         </concept>
+         <concept>
+            <code value="10169-1"/>
+            <display value="History of Ear disorders"/>
+         </concept>
+         <concept>
+            <code value="10174-1"/>
+            <display value="History of Nose disorders"/>
+         </concept>
+         <concept>
+            <code value="10168-3"/>
+            <display value="History of Cardiovascular system disorders"/>
+         </concept>
+         <concept>
+            <code value="10175-8"/>
+            <display value="History of Oral cavity disorders"/>
+         </concept>
+         <concept>
+            <code value="10177-4"/>
+            <display value="History of Respiratory system disorders"/>
+         </concept>
+         <concept>
+            <code value="11355-5"/>
+            <display value="History of Gastrointestinal system disorders"/>
+         </concept>
+         <concept>
+            <code value="11356-3"/>
+            <display value="History of Genitourinary systems disorders"/>
+         </concept>
+         <concept>
+            <code value="10176-6"/>
+            <display value="History of Reproductive system disorders"/>
+         </concept>
+         <concept>
+            <code value="10181-6"/>
+            <display value="History of Urinary tract disorders"/>
+         </concept>
+         <concept>
+            <code value="10176-6"/>
+            <display value="History of Reproductive system disorders"/>
+         </concept>
+         <concept>
+            <code value="56871-7"/>
+            <display value="History of Gynecologic system disorders"/>
+         </concept>
+         <concept>
+            <code value="49033-4"/>
+            <display value="Menstrual History - Reported"/>
+         </concept>
+         <concept>
+            <code value="56833-7"/>
+            <display value="Pregnancy related history"/>
+         </concept>
+         <concept>
+            <code value="10181-6"/>
+            <display value="History of Urinary tract disorders"/>
+         </concept>
+         <concept>
+            <code value="10173-3"/>
+            <display value="History of Musculoskeletal system disorders"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

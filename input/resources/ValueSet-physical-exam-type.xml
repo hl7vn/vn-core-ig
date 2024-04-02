@@ -1,0 +1,410 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="physical-exam-type"/>
+   <url value="http://fhir.ehealth.gov.vn/core/ValueSet/physical-exam-type"/>
+   <version value="1.0"/>
+   <name value="ValueSet-Physical_Exam_Type"/>
+   <title value="ValueSet dành cho loại thăm, khám lâm sàng"/>
+   <description value="ValueSet dành cho loại thăm, khám lâm sàng, sử dụng LOINC Code"/>
+   <status value="active"/>
+   <publisher value="Bộ Y tế"/>
+   <contact>
+      <name value="Bộ Y tế"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <compose>
+      <include>
+         <system value="http://loinc.org"/>
+         <concept>
+            <code value="10199-8"/>
+            <display value="Head, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32432-7"/>
+            <display value="Face, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32446-7"/>
+            <display value="Lip, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10197-2"/>
+            <display value="Eye, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32424-4"/>
+            <display value="Conjunctiva, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32425-1"/>
+            <display value="Cornea, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32429-3"/>
+            <display value="Extraocular muscles, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32431-9"/>
+            <display value="Eye lid, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32440-0"/>
+            <display value="Iris, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32443-4"/>
+            <display value="Lacrimal apparatus, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32459-0"/>
+            <display value="Optic lens, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32466-5"/>
+            <display value="Pupil, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32468-1"/>
+            <display value="Retina, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32471-5"/>
+            <display value="Sclera, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32469-9"/>
+            <display value="Scalp, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10195-6"/>
+            <display value="Ear, physical Findings"/>
+         </concept>
+         <concept>
+            <code value="32484-8"/>
+            <display value="Tympanic membrane, physical Findings"/>
+         </concept>
+         <concept>
+            <code value="32421-0"/>
+            <display value="Auditory canal, physical Findings"/>
+         </concept>
+         <concept>
+            <code value="10203-8"/>
+            <display value="Nose, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32460-8"/>
+            <display value="Palate, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11393-6"/>
+            <display value="Ears, nose, mouth, throat, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10201-2"/>
+            <display value="Mouth, throat, teeth, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32453-3"/>
+            <display value="Mouth, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32478-0"/>
+            <display value="Teeth and gum, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32483-0"/>
+            <display value="Tongue, physical findings"/>
+         </concept>
+         <concept>
+            <code value="56867-5"/>
+            <display value="Throat, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32444-2"/>
+            <display value="Larynx, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32482-2"/>
+            <display value="Tonsil, physical findings"/>
+         </concept>
+         <concept>
+            <code value="51850-6"/>
+            <display value="Head, ears, eyes, nose, throat, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11411-6"/>
+            <display value="Neck, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10207-9"/>
+            <display value="Thorax, lungs, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11391-0"/>
+            <display value="Chest, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11392-8"/>
+            <display value="Chest wall, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10200-4"/>
+            <display value="Heart, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10193-1"/>
+            <display value="Breasts, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10192-3"/>
+            <display value="Back, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32476-4"/>
+            <display value="Spine, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32462-4"/>
+            <display value="Paraverteberal muscles, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10191-5"/>
+            <display value="Abdomen, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10204-6"/>
+            <display value="Pelvis, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11403-3"/>
+            <display value="Groin, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10198-0"/>
+            <display value="Genitourinary tract, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11400-9"/>
+            <display value="Genitalia, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11401-7"/>
+            <display value="Genitalia female, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11402-5"/>
+            <display value="Genitalia male, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32465-7"/>
+            <display value="Prostate, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32487-1"/>
+            <display value="Vagina, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32486-3"/>
+            <display value="Uterus, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32423-6"/>
+            <display value="Cervix, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11388-6"/>
+            <display value="Buttocks, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10205-3"/>
+            <display value="Rectum, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10196-4"/>
+            <display value="Extremities, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11413-2"/>
+            <display value="Shoulder, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11387-8"/>
+            <display value="Axilla, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11386-0"/>
+            <display value="Upper arm, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11394-4"/>
+            <display value="Elbow, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11398-5"/>
+            <display value="Forearm, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11415-7"/>
+            <display value="Wrist, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11404-1"/>
+            <display value="Hand, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32427-7"/>
+            <display value="Digits, physical findings"/>
+         </concept>
+         <concept>
+            <code value="56843-6"/>
+            <display value="Nail bed, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11406-6"/>
+            <display value="Hip, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11414-0"/>
+            <display value="Thigh, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11407-4"/>
+            <display value="Knee, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11389-4"/>
+            <display value="Calf, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11385-2"/>
+            <display value="Ankle, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11397-7"/>
+            <display value="Foot, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32480-6"/>
+            <display value="Toes, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10209-5"/>
+            <display value="Neurologic balance, coordination, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32433-5"/>
+            <display value="Gait, coordination, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10212-9"/>
+            <display value="Strength, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10211-1"/>
+            <display value="Sensation, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10206-1"/>
+            <display value="Skin, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10194-9"/>
+            <display value="Neurologic deep tendon reflexes, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32426-9"/>
+            <display value="Nerves.cranial, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10208-7"/>
+            <display value="Vessels, physical findings"/>
+         </concept>
+         <concept>
+            <code value="56845-1"/>
+            <display value="Pulse strength on exam"/>
+         </concept>
+         <concept>
+            <code value="11384-5"/>
+            <display value="Physical examination by organ systems"/>
+         </concept>
+         <concept>
+            <code value="11412-4"/>
+            <display value="Respiratory system, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11477-0"/>
+            <display value="Hematologic, lymphatic, immunologic, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32450-9"/>
+            <display value="Lymph node, physical findings"/>
+         </concept>
+         <concept>
+            <code value="29301-9"/>
+            <display value="Endocrine system, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11390-2"/>
+            <display value="Cardiovascular system, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11399-3"/>
+            <display value="Gastrointestinal system, physical findings"/>
+         </concept>
+         <concept>
+            <code value="10202-0"/>
+            <display value="Neurologic system, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11410-8"/>
+            <display value="Musculoskeletal system, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32455-8"/>
+            <display value="Muscle tone, physical findings"/>
+         </concept>
+         <concept>
+            <code value="56873-3"/>
+            <display value="Brain stem reflexes, physical findings"/>
+         </concept>
+         <concept>
+            <code value="56876-6"/>
+            <display value="Primitive reflexes, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32452-5"/>
+            <display value="Motor function, physical findings"/>
+         </concept>
+         <concept>
+            <code value="32441-8"/>
+            <display value="Joint, physical findings"/>
+         </concept>
+         <concept>
+            <code value="8703-1"/>
+            <display value="Extremities, physical findings"/>
+         </concept>
+         <concept>
+            <code value="11451-2"/>
+            <display value="Psychiatric findings"/>
+         </concept>
+         <concept>
+            <code value="10210-3"/>
+            <display value="General Status"/>
+         </concept>
+         <concept>
+            <code value="10190-7"/>
+            <display value="Mental Status"/>
+         </concept>
+         <concept>
+            <code value="47420-5"/>
+            <display value="Functional Status"/>
+         </concept>
+         <concept>
+            <code value="32473-1"/>
+            <display value="Physical findings sensation"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>

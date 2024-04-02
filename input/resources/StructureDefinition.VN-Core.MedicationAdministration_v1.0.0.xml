@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-medication-administration" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-administration" />
+  <version value="1.0.0" />
+  <name value="VNCoreMedicationAdministration" />
+  <title value="MedicationAdministration Profile - VN Core R4" />
+  <status value="draft" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Thông tin mô tả liên quan đến quá trình sử dụng thuốc của người bệnh. Tham khảo thêm: https://www.hl7.org/fhir/medications-module.html" />
+  <copyright value="Bộ Y tế" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w3c.prov" />
+    <uri value="http://www.w3.org/ns/prov" />
+    <name value="W3C PROV" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationAdministration" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationAdministration.identifier">
+      <path value="MedicationAdministration.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.partOf">
+      <path value="MedicationAdministration.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-administration" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-procedure" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.statusReason">
+      <path value="MedicationAdministration.statusReason" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.category">
+      <path value="MedicationAdministration.category" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.medication[x]">
+      <path value="MedicationAdministration.medication[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.medication[x]:medicationCodeableConcept">
+      <path value="MedicationAdministration.medicationCodeableConcept" />
+      <sliceName value="medicationCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-medication-code" />
+      </binding>
+    </element>
+    <element id="MedicationAdministration.medication[x]:medicationReference">
+      <path value="MedicationAdministration.medicationReference" />
+      <sliceName value="medicationReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication" />
+      </type>
+    </element>
+    <element id="MedicationAdministration.subject">
+      <path value="MedicationAdministration.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.context">
+      <path value="MedicationAdministration.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.effective[x]">
+      <path value="MedicationAdministration.effective[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.performer">
+      <path value="MedicationAdministration.performer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.performer.actor">
+      <path value="MedicationAdministration.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="MedicationAdministration.reasonCode">
+      <path value="MedicationAdministration.reasonCode" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.reasonReference">
+      <path value="MedicationAdministration.reasonReference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.request">
+      <path value="MedicationAdministration.request" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-request" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.device">
+      <path value="MedicationAdministration.device" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.note">
+      <path value="MedicationAdministration.note" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.dosage">
+      <path value="MedicationAdministration.dosage" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.dosage.text">
+      <path value="MedicationAdministration.dosage.text" />
+      <min value="1" />
+    </element>
+    <element id="MedicationAdministration.dosage.site">
+      <path value="MedicationAdministration.dosage.site" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/snomedCT-anatomical-body-structure" />
+      </binding>
+    </element>
+    <element id="MedicationAdministration.dosage.route">
+      <path value="MedicationAdministration.dosage.route" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/snomedCT-dosage-administration-route" />
+      </binding>
+    </element>
+    <element id="MedicationAdministration.dosage.method">
+      <path value="MedicationAdministration.dosage.method" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+      </binding>
+    </element>
+    <element id="MedicationAdministration.dosage.dose">
+      <path value="MedicationAdministration.dosage.dose" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+    </element>
+    <element id="MedicationAdministration.dosage.rate[x]">
+      <path value="MedicationAdministration.dosage.rate[x]" />
+      <type>
+        <code value="Ratio" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips" />
+      </type>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

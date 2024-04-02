@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-nationality" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-05-19T09:13:57.118+00:00" />
+  </meta>
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </text>
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-nationality" />
+  <version value="1.0" />
+  <name value="Nationality" />
+  <title value="Extenstion - Patient Nationality - VN Core R4" />
+  <status value="draft" />
+  <date value="2021-05-19T09:13:54.0993836+00:00" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Extenstion về thông tin quốc tịch" />
+  <purpose value="TODO: add note" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Extenstion về thông tin quốc tịch của người bệnh" />
+      <definition value="Extenstion về thông tin quốc tịch của người bệnh" />
+      <comment value="TODO: add note" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://fhir.ehealth.gov.vn/core/StructureDefinition/extension-nationality" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ValueSet dành cho Thông tin quốc tịch - Theo ISO 3166 Part 1 2-letter code dành cho Quốc gia" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

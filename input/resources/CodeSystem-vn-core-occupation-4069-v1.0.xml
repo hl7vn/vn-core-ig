@@ -1,0 +1,85 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-occupation-4069"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-occupation-4069"/>
+   <version value="1.0"/>
+   <name value="Danh mục Nghề nghiệp theo thành phần xã hội được ban hành theo QĐ số 4069/2011/QĐ-BYT"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Bộ Y tế"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Nghề nghiệp theo thành phần xã hội được ban hành theo QĐ số 4069/2011/QĐ-BYT"/>
+   <copyright value="Bộ Y tế"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="01"/>
+      <display value="Trẻ &lt; 6 tuổi đi học, &lt;15 tuổi không đi học"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="02"/>
+      <display value="Sinh viên, học sinh"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="03"/>
+      <display value="Hưu và &gt; 60 tuổi"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="04"/>
+      <display value="Công nhân"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="05"/>
+      <display value="Nông dân"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="06"/>
+      <display value="Lực lượng vũ trang"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="07"/>
+      <display value="Trí thức"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="08"/>
+      <display value="Hành chính, sự nghiệp"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="09"/>
+      <display value="Y tế"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="10"/>
+      <display value="Dịch vụ"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="11"/>
+      <display value="Việt kiều"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="12"/>
+      <display value="Ngoại kiều"/>
+	  <definition value=""/>
+   </concept>
+   <concept>
+      <code value="99"/>
+      <display value="Khác"/>
+	  <definition value=""/>
+   </concept>
+</CodeSystem>

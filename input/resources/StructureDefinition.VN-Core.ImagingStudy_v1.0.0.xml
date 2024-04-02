@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-imaging-study" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-imaging-study" />
+  <version value="1.0.0" />
+  <name value="VNCoreImagingStudy" />
+  <title value="Imaging Study profile - VN Core R4" />
+  <status value="draft" />
+  <description value="Thông tin về các file chẩn đoán hình ảnh (X-Quang, chụp CT,...) - được lưu trữ dưới định dạng DICOM" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="dicom" />
+    <uri value="http://nema.org/dicom" />
+    <name value="DICOM Tag Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ImagingStudy" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ImagingStudy.subject">
+      <path value="ImagingStudy.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="ImagingStudy.encounter">
+      <path value="ImagingStudy.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+    </element>
+    <element id="ImagingStudy.basedOn">
+      <path value="ImagingStudy.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AppointmentResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+      </type>
+    </element>
+    <element id="ImagingStudy.referrer">
+      <path value="ImagingStudy.referrer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="ImagingStudy.interpreter">
+      <path value="ImagingStudy.interpreter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="ImagingStudy.numberOfSeries">
+      <path value="ImagingStudy.numberOfSeries" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ImagingStudy.numberOfInstances">
+      <path value="ImagingStudy.numberOfInstances" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ImagingStudy.procedureReference">
+      <path value="ImagingStudy.procedureReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-procedure" />
+      </type>
+    </element>
+    <element id="ImagingStudy.location">
+      <path value="ImagingStudy.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-location" />
+      </type>
+    </element>
+    <element id="ImagingStudy.reasonReference">
+      <path value="ImagingStudy.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-condition-encounter-diagnosis" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

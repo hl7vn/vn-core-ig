@@ -1,0 +1,23 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  
+	<p>This is a supplement to <a href="https://www.hl7.org/fhir/stu3/validation.html">HL7 FHIR Validating Resources</a></p>
+	<a name="asking-a-fhir-server"> </a>
+	<h3 id="asking-a-fhir-server">Asking a FHIR Server</h3>
+
+	<p>The <a href="https://www.hl7.org/fhir/stu3/resource-operations.html#2.28.7.1">operation validate</a> is supported by a number of servers. These include:</p>
+
+	<ul>
+	  <li><a href="#">{FHIR Server base}/{Resource}/$validate</a> - resource must be specified</li>
+	  <li>Or <a href="#">{FHIR Server base}/{Resource}/{id}/$validate</a> - Validate a resource's instance</li>
+	</ul>
+	
+	<a name="online-validation"> </a>
+	<h3 id="online-validation">Online Validation</h3>
+
+	<p>Alternatively you may validate resources using an online validation application. Validators include:</p>
+
+	<ul>
+	  <li><a href="#">Online FHIR Validation Tools</a></li>
+	</ul>
+</div>

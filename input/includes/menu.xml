@@ -1,0 +1,75 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Trang chủ</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Thông tin tham chiếu<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+		<a href="#">VBQPPL liên quan</a>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Đặc tả<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>	
+        <a href="spec.html">Thông tin chung</a>
+		<a href="profile.html">Profiles</a>
+		<a href="extension.html">Extensions</a>
+		<!-- <a href="#">Dành cho chuyên khoa</a>
+		<a href="#">Dành cho chuyên khoa</a> -->	
+      </li>
+    </ul>
+  </li>  
+  <!-- <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Tài liệu lâm sàng<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="document.html">Giới thiệu chung</a>
+		<a href="qd_831.html">Biểu mẫu HSSK theo QĐ số 831/QĐ-BYT</a>
+		<a href="qd_4210.html">Định dạng dữ liệu trong QL, giám định và thanh toán BHYT theo QĐ số 4210/QĐ-BYT</a>
+		<a href="tt_56_2017.html">Biểu mẫu Tóm tắt HSBA theo Thông tư số 56/2017/TT-BYT</a>
+      </li>
+    </ul>
+  </li>   -->
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Danh mục dùng chung<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#terminology-code-systems">CodeSystems</a>
+		<a href="artifacts.html#terminology-value-sets">ValueSets</a>
+		<a href="#">ConceptMaps</a>
+		<a href="artifacts.html#terminology-naming-systems">NamingSystems</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="security.html">An toàn, bảo mật thông tin</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hỗ trợ<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="{{site.data.fhir.path}}index.html">Bộ tiêu chuẩn HL7 FHIR</a>
+      </li>
+      <!-- <li>
+        <a href="validation.html">Validation tools</a>
+      </li>	 	  
+      <li>
+        <a href="#">FHIR Service</a>
+      </li> -->	 
+      <!-- <li>
+        <a href="downloads.html">Downloads</a>
+      </li> -->
+    </ul>
+  </li>
+</ul>      

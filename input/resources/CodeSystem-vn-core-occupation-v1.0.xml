@@ -1,0 +1,20 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-occupation"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-occupation"/>
+   <version value="1.0"/>
+   <name value="Danh mục Nghề nghiệp - theo ban hành của Tổng cục thống kê"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Tổng cục thống kê"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Nghề nghiệp - theo ban hành của Tổng cục thống kê. Tham vấn: https://www.gso.gov.vn/danhmuc/DMtongiao.aspx"/>
+   <copyright value="Tổng cục thống kê"/>
+   <caseSensitive value="true"/>
+   <content value="not-present"/>
+</CodeSystem>

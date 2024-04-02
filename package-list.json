@@ -1,0 +1,22 @@
+{
+ "package-id" : "hl7.fhir.vn.core",
+ "title" : "Việt Nam CORE IG (dựa trên phiên bản HL7 FHIR Release 4.0.1)", 
+ "canonical" : "http://fhir.ehealth.gov.vn/core", 
+ "introduction" : "Vietnam CORE IG Profiles",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://fhir.ehealth.gov.vn/core",
+  "status" : "ci-build",
+  "current" : true
+ },{
+  "version" : "1.0.0-alpha",  
+  "date" : "date", 
+  "desc" : "desc",   
+  "changes" : "link",
+  "path" : "url",   
+  "status" : "status",   
+  "fhirversion" : "4.0.1",
+  "sequence" : "sequence"
+ } ]
+}

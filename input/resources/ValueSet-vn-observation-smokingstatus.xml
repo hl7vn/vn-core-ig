@@ -1,0 +1,62 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vn-core-observation-smokingstatus"/>
+  <url value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-observation-smokingstatus"/>
+  <version value="1.0"/>
+  <name value="ValueSet-Smoking_Status"/>
+  <title value="ValueSet dành cho Tình trạng hút thuốc lá (SNOMED CT)"/>
+  <status value="active"/>
+  <date value="2020-12-30"/>
+  <publisher value="Bộ Y tế"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://moh.gov.vn"/>
+    </telecom>
+  </contact>
+  <description value="This value set enumerates a preferred set of SNOMED CT codes historically used for the current smoking status of a patient."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="VN"/>
+      <display value="Vietnam"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright &#xA9; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="449868002"/>
+        <display value="Current every day smoker"/>
+      </concept>
+      <concept>
+        <code value="428041000124106"/>
+        <display value="Current some day smoker"/>
+      </concept>
+      <concept>
+        <code value="8517006"/>
+        <display value="Former smoker"/>
+      </concept>
+      <concept>
+        <code value="266919005"/>
+        <display value="Never smoker"/>
+      </concept>
+      <concept>
+        <code value="77176002"/>
+        <display value="Smoker, current status unknown"/>
+      </concept>
+      <concept>
+        <code value="266927001"/>
+        <display value="Unknown if ever smoked"/>
+      </concept>
+      <concept>
+        <code value="428071000124103"/>
+        <display value="Current Heavy tobacco smoker"/>
+      </concept>
+      <concept>
+        <code value="428061000124105"/>
+        <display value="Current Light tobacco smoker"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

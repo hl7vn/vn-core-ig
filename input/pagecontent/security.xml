@@ -1,0 +1,20 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+	<a name="security"> </a>
+	<h3>Các lưu ý về Bảo mật an toàn thông tin chung:</h3>
+	
+	<p>Việc trao đổi thông tin liên quan đến người bệnh giữa các hệ thống thông tin thường dẫn đến nguy cơ rò rỉ những thông tin của người bệnh. Vì lý do này, các giao dịch thông tin cần được dảm bảo về tính bảo mật an toàn thông tin cần thiết thông qua việc hạn chế những truy cập không phép, mã hóa thông tin khi trao đổi và ghi log, thực thi đo lường những giao dịch thông tin này một cách phù hợp.
+	</p>	
+
+	<p>Những đơn vị cung cấp dịch vụ <strong>NÊN</strong> lưu ý đến <a href="http://hl7.org/fhir/R4/security.html" target="_blank">những khuyến nghị về bảo mật, an toàn thông tin</a> liên quan đến việc trao đổi thông tin người bệnh thông tin bộ tiêu chuẩn HL7 FHIR, đặc biệt những khía cạnh sau:</p>
+
+	<ul>
+	  <li><a href="http://hl7.org/fhir/R4/security.html#http" target="_blank">Kênh giao tiếp</a></li>
+	  <li><a href="http://hl7.org/fhir/R4/security.html#authentication" target="_blank">Xác thực và định danh</a></li>
+	  <li><a href="http://hl7.org/fhir/R4/security.html#authorization/access%20control" target="_blank">Kiểm soát kết nối</a></li>
+	  <li><a href="http://hl7.org/fhir/R4/security.html#audit%20logging" target="_blank">Audit/Logging</a></li>
+	  <li><a href="http://hl7.org/fhir/R4/security.html#digital%20signatures" target="_blank">Chữ ký số</a></li>
+	  <li><a href="http://hl7.org/fhir/R4/security-labels.html" target="_blank">Security Labels</a></li>
+	  <li><a href="http://hl7.org/fhir/R4/security.html#narrative" target="_blank">Trường thông tin diễn giải</a></li>
+	</ul>
+</div>

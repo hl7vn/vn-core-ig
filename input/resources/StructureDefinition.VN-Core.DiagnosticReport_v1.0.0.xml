@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vn-core-diagnostic-report" />
+  <url value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-diagnostic-report" />
+  <version value="1.0.0" />
+  <name value="VNCoreDiagnosticReport" />
+  <title value="DiagnosticReport Profile - VN Core R4" />
+  <status value="draft" />
+  <publisher value="Cục Công nghệ thông tin - Bộ Y tế" />
+  <description value="Thông tin mô tả về báo cáo liên quan đến dịch vụ kỹ thuật/phẫu thuật/thủ thuật" />
+  <copyright value="Bộ Y tế Việt Nam" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-service-request" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-medication-request" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips" />
+        <profile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-codeableconcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://fhir.ehealth.gov.vn/core/ValueSet/vn-core-diagnosticreport-code" />
+      </binding>
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-patient" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.encounter">
+      <path value="DiagnosticReport.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-encounter" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.issued">
+      <path value="DiagnosticReport.issued" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.performer">
+      <path value="DiagnosticReport.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.resultsInterpreter">
+      <path value="DiagnosticReport.resultsInterpreter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-practitioner" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-specimen" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.result:observation-results">
+      <path value="DiagnosticReport.result" />
+      <sliceName value="observation-results" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-pathology-uv-ips" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips" />
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-observation-lab-code" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-observation-pathology-code" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-observation-radiology-code" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.imagingStudy">
+      <path value="DiagnosticReport.imagingStudy" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-imaging-study" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.media">
+      <path value="DiagnosticReport.media" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.media.link">
+      <path value="DiagnosticReport.media.link" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://fhir.ehealth.gov.vn/core/StructureDefinition/vn-core-media-observation" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.conclusion">
+      <path value="DiagnosticReport.conclusion" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.presentedForm">
+      <path value="DiagnosticReport.presentedForm" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

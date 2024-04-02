@@ -1,0 +1,20 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="vn-core-administrative-address"/>
+   <url value="http://fhir.ehealth.gov.vn/core/CodeSystem/vn-core-administrative-address"/>
+   <version value="1.0"/>
+   <name value="Danh mục Địa danh hành chính - theo ban hành của Tổng cục thống kê"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2020-12-31"/>
+   <publisher value="Tổng cục thống kê"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://moh.gov.vn"/>
+      </telecom>
+   </contact>
+   <description value="Danh mục Địa danh hành chính - theo ban hành của Tổng cục thống kê"/>
+   <copyright value="Tổng cục thống kê"/>
+   <caseSensitive value="true"/>
+   <content value="not-present"/>
+</CodeSystem>

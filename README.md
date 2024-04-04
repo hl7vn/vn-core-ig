@@ -1,4 +1,4 @@
-#  Welcome to the Vietnam Core Data for Interoperability TG Repository
+#  Welcome to the Vietnam Core Data for Interoperability Working Group Repository
 
 
 Authors:  Tran Tung, Nguyen Hai Phong

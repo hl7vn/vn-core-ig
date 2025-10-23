@@ -11,6 +11,7 @@ output
 # Windows generated files #
 ###########################
 Thumbs.db
+.index.db
 
 # OS generated files #
 ######################
@@ -20,3 +21,5 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+/input-cache
+*.db

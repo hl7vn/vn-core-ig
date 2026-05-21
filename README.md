@@ -1,6 +1,6 @@
 #  Welcome to the Vietnam Core Data for Interoperability Working Group Repository
 
 
-Authors:  Tran Tung, Nguyen Hai Phong
+Authors:  Nguyen Hai Phong (contact me at haiphong.nguyen@gmail.com)
 
 This branch is the active branch for applying issues and trackers for the Continuous Integration (CI) Build for VN Core Data Implementation Guide. See the Directory of published versions for a list of VN Core Data versions and change log.
